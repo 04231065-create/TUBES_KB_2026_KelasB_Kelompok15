@@ -58,21 +58,74 @@ def show(fig):
 
 STYLE = """
 <style>
-[data-testid="stSidebar"] {background: linear-gradient(180deg, #eaf2fd 0%, #f6f9fe 100%); border-right: 1px solid #d7e4f7;}
-[data-testid="stSidebar"] h1 {color: #14213d;}
-.kb-banner {background: linear-gradient(120deg, #14213d 0%, #1c5cab 65%, #2a78d6 100%); color: #f7f9fc;
-  padding: 26px 32px; border-radius: 16px; margin: 4px 0 22px 0; box-shadow: 0 4px 14px rgba(20,33,61,.18);}
-.kb-banner .kb-eyebrow {font-size: .82rem; letter-spacing: .14em; text-transform: uppercase; color: #a9c9f2; font-weight: 600;}
-.kb-banner .kb-title {font-size: 2.1rem; font-weight: 700; line-height: 1.15; margin: 4px 0 2px 0; color: #ffffff;}
-.kb-banner .kb-sub {font-size: 1.02rem; color: #dbe7f8; margin-top: 6px;}
-[data-testid="stMetric"] {background: #ffffff; border: 1px solid #e3e8f0; border-left: 5px solid #2a78d6;
-  border-radius: 12px; padding: 12px 16px; box-shadow: 0 1px 4px rgba(20,33,61,.06);}
-[data-testid="stMetricValue"] {color: #14213d;}
-h2, h3, h4 {color: #14213d;}
-.stTabs [aria-selected="true"] {color: #1c5cab !important;}
+/* ===== Latar utama: hitam -> biru tua dengan cahaya biru/ungu ===== */
+.stApp, [data-testid="stAppViewContainer"] {
+  background:
+    radial-gradient(900px 520px at 8% -8%, rgba(42,120,214,.30), transparent 60%),
+    radial-gradient(800px 480px at 100% 0%, rgba(98,80,214,.22), transparent 60%),
+    radial-gradient(700px 500px at 50% 110%, rgba(28,92,171,.25), transparent 60%),
+    linear-gradient(180deg, #04060c 0%, #070d1a 45%, #0a1426 100%) !important;
+  color: #e6edf7;
+}
+[data-testid="stHeader"] {background: rgba(4,6,12,.55); backdrop-filter: blur(8px);}
+/* ===== Teks ===== */
+.stApp p, .stApp li, .stApp label, .stApp span, .stApp div[data-testid="stMarkdownContainer"],
+.stApp h1, .stApp h2, .stApp h3, .stApp h4, .stApp td, .stApp th, .stApp caption, .katex {color: #e6edf7;}
+.stApp h2, .stApp h3, .stApp h4 {color: #ffffff; letter-spacing: .01em;}
+.stApp a {color: #6fb1ff !important;}
+[data-testid="stCaptionContainer"], .stApp small {color: #9fb3d1 !important;}
+/* ===== Sidebar ===== */
+[data-testid="stSidebar"] {background: linear-gradient(180deg, #03050a 0%, #081227 60%, #0b1a36 100%) !important;
+  border-right: 1px solid rgba(76,155,240,.25);}
+[data-testid="stSidebar"] * {color: #dbe6f6;}
+[data-testid="stSidebar"] h1 {color: #ffffff; text-shadow: 0 0 18px rgba(76,155,240,.55);}
+/* ===== Banner judul ===== */
+.kb-banner {background: linear-gradient(120deg, #050b18 0%, #0f2a5c 45%, #1c5cab 75%, #6250d6 100%);
+  padding: 28px 34px; border-radius: 18px; margin: 4px 0 24px 0; position: relative; overflow: hidden;
+  border: 1px solid rgba(111,177,255,.35); box-shadow: 0 0 0 1px rgba(76,155,240,.08), 0 10px 40px rgba(28,92,171,.35);}
+.kb-banner:after {content: ""; position: absolute; inset: 0;
+  background: repeating-linear-gradient(90deg, rgba(255,255,255,.035) 0 1px, transparent 1px 42px),
+              repeating-linear-gradient(0deg, rgba(255,255,255,.035) 0 1px, transparent 1px 42px);}
+.kb-banner .kb-eyebrow {font-size: .8rem; letter-spacing: .18em; text-transform: uppercase; color: #8fc3ff !important;
+  font-weight: 700; position: relative; z-index: 1;}
+.kb-banner .kb-title {font-size: 2.2rem; font-weight: 800; line-height: 1.12; margin: 6px 0 2px 0; color: #ffffff !important;
+  text-shadow: 0 0 24px rgba(111,177,255,.45); position: relative; z-index: 1;}
+.kb-banner .kb-sub {font-size: 1.02rem; color: #c9dbf5 !important; margin-top: 8px; position: relative; z-index: 1;}
+/* ===== Kartu metrik (glass + glow) ===== */
+[data-testid="stMetric"] {background: linear-gradient(160deg, rgba(20,38,72,.85), rgba(10,20,40,.85));
+  border: 1px solid rgba(111,177,255,.22); border-left: 4px solid #4c9bf0; border-radius: 14px;
+  padding: 14px 18px; box-shadow: 0 0 22px rgba(57,135,229,.16);}
+[data-testid="stMetricValue"], [data-testid="stMetricValue"] * {color: #ffffff !important;}
+[data-testid="stMetricLabel"], [data-testid="stMetricLabel"] * {color: #9fb3d1 !important;}
+/* ===== Gambar/plot, tabel, kotak info ===== */
+[data-testid="stImage"] img, [data-testid="stPyplot"] img, .stApp img {border-radius: 14px;
+  border: 1px solid rgba(111,177,255,.18); box-shadow: 0 0 24px rgba(28,92,171,.18);}
+.stApp table {background: rgba(13,21,38,.85) !important; border-radius: 10px;}
+.stApp thead tr th, .stApp table th {background: #12223f !important; color: #cfe2ff !important;}
+.stApp table td {border-color: #1f2c45 !important;}
+[data-testid="stAlert"] {background: rgba(28,92,171,.18) !important; border: 1px solid rgba(111,177,255,.25);}
+/* ===== Input, select, uploader, tombol ===== */
+[data-baseweb="input"], [data-baseweb="input"] > div, [data-baseweb="select"] > div, [data-baseweb="base-input"],
+[data-testid="stFileUploaderDropzone"], [data-testid="stNumberInput"] button {
+  background: #0f1b30 !important; border-color: #22406e !important; color: #e6edf7 !important;}
+.stApp input, .stApp textarea {color: #e6edf7 !important; -webkit-text-fill-color: #e6edf7 !important;}
+.stButton button, [data-testid="stDownloadButton"] button {background: linear-gradient(90deg, #1c5cab, #4c9bf0) !important;
+  color: #ffffff !important; border: 0 !important; box-shadow: 0 0 16px rgba(76,155,240,.35);}
+/* ===== Tabs ===== */
+.stTabs [data-baseweb="tab-list"] {gap: 6px; border-bottom: 1px solid #1f2c45;}
+.stTabs [data-baseweb="tab"] {color: #9fb3d1 !important; background: transparent;}
+.stTabs [aria-selected="true"] {color: #6fb1ff !important;}
+hr {border-color: #1f2c45 !important;}
 </style>
 """
 st.markdown(STYLE, unsafe_allow_html=True)
+if st.get_option("theme.base") != "dark":
+    # tanpa .streamlit/config.toml bertema gelap, grafik bawaan Streamlit memakai teks gelap: beri kartu terang
+    st.markdown("<style>[data-testid='stVegaLiteChart'], [data-testid='stArrowVegaLiteChart']"
+                "{background:#eef3fa;border-radius:12px;padding:10px;}"
+                "[data-testid='stDataFrame']{background:#ffffff;border-radius:10px;}</style>",
+                unsafe_allow_html=True)
+viz.use_dark()
 
 
 def banner(title: str, subtitle: str = "", eyebrow: str = "Kelompok 15 · Smart Room Occupancy"):
@@ -119,13 +172,13 @@ target `Room_Occupancy_Count` (0–3).
                     "precision, recall, confusion matrix.")
     st.markdown("#### Diagram sistem")
     st.graphviz_chart("""
-digraph G { rankdir=LR; node [shape=box, style="rounded,filled", fillcolor="#eef4fc", color="#2a78d6", fontname="Helvetica", fontsize=11];
+digraph G { rankdir=LR; bgcolor="transparent"; edge [color="#6fb1ff"]; node [shape=box, style="rounded,filled", fillcolor="#0f2a5c", color="#4c9bf0", fontcolor="#e6edf7", fontname="Helvetica", fontsize=11];
   data [label="UCI 864\\n16 sensor, 30 s"]; pre [label="Preprocessing\\nsplit kronologis 60/20/20\\nscaler fit di train\\nwindowing T langkah"];
-  ga [label="GA\\nseleksi sensor\\nkromosom 16-bit", fillcolor="#fdeee7", color="#eb6834"];
-  pso [label="PSO\\nhidden, lr, T,\\ndropout, batch", fillcolor="#e6f6f0", color="#1baf7a"];
-  rnn [label="Elman RNN\\nP(0..3 orang)"]; fis [label="Fuzzy Mamdani\\nOccupancy + CO2 + Suhu", fillcolor="#fdf4e0", color="#eda100"];
+  ga [label="GA\\nseleksi sensor\\nkromosom 16-bit", fillcolor="#3a1d10", color="#f07a45"];
+  pso [label="PSO\\nhidden, lr, T,\\ndropout, batch", fillcolor="#0f3327", color="#2cc590"];
+  rnn [label="Elman RNN\\nP(0..3 orang)"]; fis [label="Fuzzy Mamdani\\nOccupancy + CO2 + Suhu", fillcolor="#3a2d0a", color="#f0b429"];
   out [label="Rekomendasi HVAC\\nMinimum/Low/Medium/High"]; dash [label="Streamlit\\ndashboard", shape=component];
-  data->pre->ga->pso->rnn->fis->out->dash; pre->rnn [style=dashed, label="fitur terpilih"]; }
+  data->pre->ga->pso->rnn->fis->out->dash; pre->rnn [style=dashed, label="fitur terpilih", fontcolor="#9fb3d1"]; }
 """)
     comp = art("comparison.json")
     fe = art("fuzzy_eval.json")
