@@ -4,7 +4,7 @@ Durasi slot UAS ±15 menit: **3 menit problem & data → 3 menit metode & eksper
 
 ## Persiapan (H-1)
 
-- [ ] Buka URL Streamlit di jendela **Incognito**. Pastikan bisa diakses tanpa login dan app tidak tertidur. Kalau tertidur, klik "Wake up" 5 menit sebelum giliran.
+- [ ] Buka https://kb-kelompok15-occupancy.streamlit.app di jendela **Incognito**. Pastikan bisa diakses tanpa login dan app tidak tertidur. Kalau tertidur, klik "Wake up" 5 menit sebelum giliran.
 - [ ] Siapkan cadangan lokal: `pip install -r requirements.txt` lalu `streamlit run app.py` (tes tanpa internet).
 - [ ] Siapkan file `data/sample_input.csv` di desktop untuk demo upload.
 - [ ] Buka slide, dashboard, dan repo GitHub di tab terpisah.
@@ -22,7 +22,7 @@ Durasi slot UAS ±15 menit: **3 menit problem & data → 3 menit metode & eksper
 
 ## Langkah live demo (5 menit)
 
-1. **Prediction → Input manual**: pilih preset *Ruang kosong* → prediksi 0 orang, HVAC **Minimum** (10%). Ganti ke *1 orang* → **Low** (±45%), lalu *2 orang* → **Medium** (±68%). Jelaskan bahwa nilai sensor dianggap konstan selama T langkah. Jangan memakai preset *3 orang* sebagai contoh utama: median yang ditahan konstan menghilangkan fluktuasi suara/PIR sehingga terbaca 2 orang. Kalau ditanya, jelaskan alasan ini.
+1. **Prediction → Input manual**: pilih preset *Ruang kosong* → prediksi 0 orang, HVAC **Minimum**. Lalu *1 orang* → **Low**, *2 orang* → **Medium**, *3 orang* → **High**. Jelaskan bahwa preset adalah rata-rata data train per kelas dan nilai sensor dianggap konstan selama T langkah.
 2. **Tab "Pilih jendela dari test set"**: pilih sesi dengan perpindahan orang, lalu geser slider melewati momen orang masuk. Tunjukkan prediksi vs aktual dan HVAC yang ikut berubah. Tunjukkan juga plot kesalahan: error terkumpul di transisi.
 3. **Tab "Upload CSV"**: unggah `sample_input.csv` → tabel prediksi per baris → unduh hasil CSV.
 4. **Fuzzy Inference**: geser CO₂ ke 1300 ppm dan suhu ke 29 °C. Tunjukkan derajat keanggotaan, aturan aktif (α), area agregasi, dan centroid.
