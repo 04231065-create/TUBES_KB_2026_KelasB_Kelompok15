@@ -307,13 +307,12 @@ elif page.startswith("7"):
     with tab1:
         st.markdown("Nilai sensor dianggap **konstan selama T langkah** (kondisi tunak). "
                     "Sensor yang tidak dipilih GA (tanpa ✓) tidak memengaruhi prediksi.")
-        st.caption("Preset = median data train per kelas. Karena suara & PIR aslinya berfluktuasi, nilai median yang "
-                   "ditahan konstan bisa membuat preset '3 orang' terbaca 2 orang. Untuk kasus dinamis gunakan tab "
-                   "'Pilih jendela dari test set'.")
+        st.caption("Preset = rata-rata data train per kelas (PIR dibulatkan ke 0/1). Untuk kasus dinamis, "
+                   "misalnya saat orang masuk/keluar, gunakan tab 'Pilih jendela dari test set'.")
         presets = {"Ruang kosong": 0, "1 orang": 1, "2 orang": 2, "3 orang": 3}
-        pr = st.radio("Isi otomatis dari median kelas (data train)", list(presets), horizontal=True)
+        pr = st.radio("Isi otomatis dari rata-rata kelas (data train)", list(presets), horizontal=True)
         tr = b.df[(b.df["split"] == "train") & (b.df[cfg["target"]] == presets[pr])]
-        med = tr[b.features].median()
+        med = tr[b.features].mean()
         vals = {}
         cols = st.columns(4)
         for i, f in enumerate(b.features):
