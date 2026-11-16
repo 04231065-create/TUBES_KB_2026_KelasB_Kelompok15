@@ -55,6 +55,32 @@ def show(fig):
     viz.plt.close(fig)
 
 
+
+STYLE = """
+<style>
+[data-testid="stSidebar"] {background: linear-gradient(180deg, #eaf2fd 0%, #f6f9fe 100%); border-right: 1px solid #d7e4f7;}
+[data-testid="stSidebar"] h1 {color: #14213d;}
+.kb-banner {background: linear-gradient(120deg, #14213d 0%, #1c5cab 65%, #2a78d6 100%); color: #f7f9fc;
+  padding: 26px 32px; border-radius: 16px; margin: 4px 0 22px 0; box-shadow: 0 4px 14px rgba(20,33,61,.18);}
+.kb-banner .kb-eyebrow {font-size: .82rem; letter-spacing: .14em; text-transform: uppercase; color: #a9c9f2; font-weight: 600;}
+.kb-banner .kb-title {font-size: 2.1rem; font-weight: 700; line-height: 1.15; margin: 4px 0 2px 0; color: #ffffff;}
+.kb-banner .kb-sub {font-size: 1.02rem; color: #dbe7f8; margin-top: 6px;}
+[data-testid="stMetric"] {background: #ffffff; border: 1px solid #e3e8f0; border-left: 5px solid #2a78d6;
+  border-radius: 12px; padding: 12px 16px; box-shadow: 0 1px 4px rgba(20,33,61,.06);}
+[data-testid="stMetricValue"] {color: #14213d;}
+h2, h3, h4 {color: #14213d;}
+.stTabs [aria-selected="true"] {color: #1c5cab !important;}
+</style>
+"""
+st.markdown(STYLE, unsafe_allow_html=True)
+
+
+def banner(title: str, subtitle: str = "", eyebrow: str = "Kelompok 15 · Smart Room Occupancy"):
+    sub = f'<div class="kb-sub">{subtitle}</div>' if subtitle else ""
+    st.markdown(f'<div class="kb-banner"><div class="kb-eyebrow">{eyebrow}</div>'
+                f'<div class="kb-title">{title}</div>{sub}</div>', unsafe_allow_html=True)
+
+
 cfg = load_config()
 st.sidebar.title("🏠 Smart Room Occupancy")
 st.sidebar.caption("Kecerdasan Buatan TE2514031 · Kelas B · Kelompok 15")
@@ -67,8 +93,8 @@ st.sidebar.caption("Pipeline: UCI data → preprocessing → GA (seleksi sensor)
 
 # ================================================================== 1. OVERVIEW
 if page.startswith("1"):
-    st.title("Smart Room Occupancy Estimation")
-    st.subheader("Hybrid Intelligent System: GA + PSO + RNN + Fuzzy Logic")
+    banner("Smart Room Occupancy Estimation", "Hybrid Intelligent System: GA + PSO + RNN + Fuzzy Logic · "
+           "Kecerdasan Buatan TE2514031 · Kelas B", eyebrow="Tugas Besar · UAS")
     c1, c2 = st.columns([3, 2])
     with c1:
         st.markdown("""
@@ -112,7 +138,7 @@ digraph G { rankdir=LR; node [shape=box, style="rounded,filled", fillcolor="#eef
 
 # ================================================================== 2. DATASET
 elif page.startswith("2"):
-    st.title("Dataset Explorer")
+    banner("Dataset Explorer", "UCI Room Occupancy Estimation (ID 864) · statistik, split kronologis, korelasi")
     eda = art("eda.json")
     b = bundle()
     df = b.df
@@ -152,7 +178,7 @@ elif page.startswith("2"):
 
 # ================================================================== 3. GA
 elif page.startswith("3"):
-    st.title("Genetic Algorithm – Seleksi Sensor")
+    banner("Genetic Algorithm – Seleksi Sensor", "Kromosom 16-bit · fitness CV forward-chaining · 5 seed")
     ga = art("ga_results.json")
     gc = ga["config"]
     st.latex(r"F(c)=\overline{\big[\mathrm{macroF1}_{val,k}-\mathrm{logloss}_{val,k}\big]}_{fold\,k}\big(\mathrm{RNN}(c)\big)-\lambda\frac{\sum_i c_i}{16},"
@@ -192,7 +218,7 @@ elif page.startswith("3"):
 
 # ================================================================== 4. PSO
 elif page.startswith("4"):
-    st.title("Particle Swarm Optimization – Hyperparameter RNN")
+    banner("Particle Swarm Optimization – Hyperparameter RNN", "5 dimensi: hidden, learning rate, T, dropout, batch · 3 seed per run")
     pa, pg = art("pso_all.json"), art("pso_ga.json")
     pc = pa["config"]
     st.latex(r"v_{i}^{t+1}=w\,v_i^t+c_1r_1(p_i-x_i^t)+c_2r_2(g-x_i^t),\qquad x_i^{t+1}=x_i^t+v_i^{t+1}")
@@ -228,7 +254,7 @@ elif page.startswith("4"):
 
 # ================================================================== 5. NN
 elif page.startswith("5"):
-    st.title("Neural Network – Elman RNN")
+    banner("Neural Network – Elman RNN", "Ditulis dari nol dengan NumPy · BPTT + Adam · early stopping")
     comp = art("comparison.json")
     name = st.selectbox("Model", list(MODEL_NAMES), index=3, format_func=MODEL_NAMES.get)
     r = comp[name]
@@ -262,7 +288,7 @@ temporal sehingga model perlu membaca beberapa langkah sebelumnya.""")
 
 # ================================================================== 6. FUZZY
 elif page.startswith("6"):
-    st.title("Fuzzy Inference System – Rekomendasi HVAC")
+    banner("Fuzzy Inference System – Rekomendasi HVAC", "Mamdani · 3 input · 27 aturan · defuzzifikasi centroid")
     st.markdown("Mamdani · AND = min · implikasi = min · agregasi = max · defuzzifikasi = **centroid**. "
                 "Rule disusun dari: `level = base(Occupancy) + adj(CO2) + adj(Suhu)` (Empty=0, Few=1, Full=2; "
                 "CO2 High=+1; Suhu Cool=−1, Warm=+1), di-clip ke Minimum…High.")
@@ -298,7 +324,7 @@ elif page.startswith("6"):
 
 # ================================================================== 7. PREDICTION
 elif page.startswith("7"):
-    st.title("Prediction / Simulation")
+    banner("Prediction / Simulation", "Input manual, jendela test, atau upload CSV → RNN → keputusan HVAC")
     name = st.selectbox("Model", list(MODEL_NAMES), index=3, format_func=MODEL_NAMES.get)
     p = pipe(name)
     st.caption(f"Model memakai {len(p.features)} sensor: {', '.join(p.features)} · panjang jendela T = {p.T}")
@@ -379,7 +405,7 @@ elif page.startswith("7"):
 
 # ================================================================== 8. COMPARISON
 else:
-    st.title("Model Comparison")
+    banner("Model Comparison", "Baseline vs GA+NN vs PSO+NN vs GA+PSO+NN · mean ± std 5 seed")
     comp = art("comparison.json")
     fe = art("fuzzy_eval.json")
     rows = []
