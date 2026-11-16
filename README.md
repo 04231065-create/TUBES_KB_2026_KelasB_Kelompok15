@@ -1,4 +1,4 @@
-# Smart Room Occupancy Estimation — Hybrid GA · PSO · RNN · Fuzzy · Streamlit
+# Smart Room Occupancy Estimation - Hybrid GA · PSO · RNN · Fuzzy · Streamlit
 
 Tugas Besar **Kecerdasan Buatan (TE2514031)**, Gasal 2026/2027, **Kelas B, Kelompok 15**.
 
