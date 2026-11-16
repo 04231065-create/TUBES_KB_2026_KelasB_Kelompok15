@@ -22,6 +22,29 @@ SEQ = LinearSegmentedColormap.from_list("seq_blue", ["#f3f7fd", "#cde2fb", "#86b
 DIV = LinearSegmentedColormap.from_list("div_br", ["#1c5cab", "#86b6ef", "#f0efec", "#ef9a99", "#b8302f"])
 CLASS_LABELS = ["0 orang", "1 orang", "2 orang", "3 orang"]
 
+HI_TEXT = "white"  # warna teks di sel heatmap yang pekat
+
+
+def _apply_rc():
+    plt.rcParams.update({
+        "figure.facecolor": SURFACE, "axes.facecolor": SURFACE, "savefig.facecolor": SURFACE,
+        "axes.edgecolor": GRID, "axes.labelcolor": INK2, "xtick.color": INK2, "ytick.color": INK2,
+        "grid.color": GRID, "axes.titlecolor": INK, "text.color": INK, "legend.labelcolor": INK2,
+    })
+
+
+def use_dark():
+    """Tema gelap untuk dashboard (laporan PDF tetap memakai tema terang)."""
+    global SURFACE, INK, INK2, GRID, SERIES, SEQ, DIV, HI_TEXT
+    SURFACE, INK, INK2, GRID = "#0d1526", "#e6edf7", "#9fb3d1", "#1f2c45"
+    SERIES = ["#4c9bf0", "#f07a45", "#2cc590", "#f0b429", "#e77fb0", "#3fbf3f", "#9a8cf0", "#ef6b6b"]
+    SEQ = LinearSegmentedColormap.from_list("seq_dark", ["#111c33", "#16305c", "#1c5cab", "#3987e5",
+                                                         "#86b6ef", "#d5e7fd"])
+    DIV = LinearSegmentedColormap.from_list("div_dark", ["#3987e5", "#1f4f8f", "#1b2232", "#8f2f2e", "#e05a59"])
+    HI_TEXT = "#0b1220"
+    _apply_rc()
+
+
 plt.rcParams.update({
     "figure.facecolor": SURFACE, "axes.facecolor": SURFACE, "savefig.facecolor": SURFACE,
     "axes.edgecolor": GRID, "axes.labelcolor": INK2, "xtick.color": INK2, "ytick.color": INK2,
@@ -93,7 +116,7 @@ def correlation_heatmap(corr, labels):
         for j in range(len(labels)):
             if abs(corr[i, j]) >= 0.5 and i != j:
                 ax.text(j, i, f"{corr[i, j]:.2f}", ha="center", va="center", fontsize=5.5,
-                        color="white" if abs(corr[i, j]) > 0.75 else INK)
+                        color="white" if abs(corr[i, j]) > 0.75 else INK)  # DIV gelap: ujung tetap pekat
     fig.colorbar(im, ax=ax, shrink=0.8, label="Pearson r")
     ax.set_title("Matriks korelasi sensor & target")
     return fig
@@ -212,7 +235,7 @@ def confusion(cm, labels=CLASS_LABELS, title="Confusion matrix (test)", normaliz
         for j in range(cm.shape[1]):
             txt = f"{int(cm[i, j])}\n{shown[i, j]:.0%}" if normalize else f"{int(cm[i, j])}"
             ax.text(j, i, txt, ha="center", va="center", fontsize=7.5,
-                    color="white" if shown[i, j] > 0.55 else INK)
+                    color=HI_TEXT if shown[i, j] > 0.55 else INK)
     ax.set_xticks(range(len(labels)), labels, fontsize=7.5)
     ax.set_yticks(range(len(labels)), labels, fontsize=7.5)
     ax.set_xlabel("Prediksi")
