@@ -1,0 +1,12 @@
+started 2026-11-15 23:10:21
+rule check: {'n_rules': 27, 'complete': True, 'conflicts': 0, 'monotonic_checks': 950, 'label_monotonic_violations': 0, 'crisp_drops_over_0p5': 33, 'max_crisp_drop_pct': 2.13}
+Ruang kosong, CO2 rendah, sejuk: 9.2% Minimum
+Ruang kosong, CO2 tinggi (sisa), hangat: 62.3% Medium
+1 orang, normal: 35.0% Low
+2 orang, CO2 naik, sedikit hangat: 69.8% Medium
+3 orang, CO2 tinggi, hangat: 88.4% High
+3 orang, CO2 rendah, dingin: 35.0% Low
+Batas bawah semua input: 9.2% Minimum
+Batas atas semua input: 88.4% High
+agreement 0.9953 within1 1.0000 under 0.0005 over 0.0042 MAE% 0.12 mean pred 24.8
+sample_input.csv rows 240 from test session 4, classes [0, 1, 2]

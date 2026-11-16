@@ -1,0 +1,39 @@
+started 2026-11-15 22:48:55
+features (8): ['S1_Light', 'S2_Light', 'S3_Light', 'S4_Light', 'S1_Sound', 'S4_Sound', 'S6_PIR', 'S7_PIR']
+[PSO seed 101] it  0 gbest 0.9854 mean 0.9179 hp {'hidden': 58, 'lr': 0.0019081675907514156, 'seq_len': 13, 'dropout': 0.32598650973020254, 'batch_size': 32} evals 8
+[PSO seed 101] it  1 gbest 0.9890 mean 0.9823 hp {'hidden': 73, 'lr': 0.002720513294067869, 'seq_len': 13, 'dropout': 0.4416310564099865, 'batch_size': 64} evals 16
+[PSO seed 101] it  2 gbest 0.9890 mean 0.9632 hp {'hidden': 73, 'lr': 0.002720513294067869, 'seq_len': 13, 'dropout': 0.4416310564099865, 'batch_size': 64} evals 24
+[PSO seed 101] it  3 gbest 0.9890 mean 0.9715 hp {'hidden': 73, 'lr': 0.002720513294067869, 'seq_len': 13, 'dropout': 0.4416310564099865, 'batch_size': 64} evals 32
+[PSO seed 101] it  4 gbest 0.9923 mean 0.9471 hp {'hidden': 73, 'lr': 0.0023171852117230313, 'seq_len': 15, 'dropout': 0.37678668059542986, 'batch_size': 64} evals 40
+[PSO seed 101] it  5 gbest 0.9923 mean 0.9596 hp {'hidden': 73, 'lr': 0.0023171852117230313, 'seq_len': 15, 'dropout': 0.37678668059542986, 'batch_size': 64} evals 48
+[PSO seed 101] it  6 gbest 0.9923 mean 0.9282 hp {'hidden': 73, 'lr': 0.0023171852117230313, 'seq_len': 15, 'dropout': 0.37678668059542986, 'batch_size': 64} evals 56
+[PSO seed 101] it  7 gbest 0.9923 mean 0.9176 hp {'hidden': 73, 'lr': 0.0023171852117230313, 'seq_len': 15, 'dropout': 0.37678668059542986, 'batch_size': 64} evals 64
+[PSO seed 101] it  8 gbest 0.9930 mean 0.9652 hp {'hidden': 73, 'lr': 0.0024222906447134065, 'seq_len': 12, 'dropout': 0.3829879161723897, 'batch_size': 64} evals 72
+[PSO seed 101] it  9 gbest 0.9930 mean 0.9735 hp {'hidden': 73, 'lr': 0.0024222906447134065, 'seq_len': 12, 'dropout': 0.3829879161723897, 'batch_size': 64} evals 80
+[PSO seed 101] it 10 gbest 0.9930 mean 0.9691 hp {'hidden': 73, 'lr': 0.0024222906447134065, 'seq_len': 12, 'dropout': 0.3829879161723897, 'batch_size': 64} evals 88
+seed 101: gbest 0.9930 hp {'hidden': 73, 'lr': 0.0024222906447134065, 'seq_len': 12, 'dropout': 0.3829879161723897, 'batch_size': 64} evals 88 time 465.3s
+[PSO seed 202] it  0 gbest 0.9888 mean 0.9191 hp {'hidden': 19, 'lr': 0.007996897580957268, 'seq_len': 22, 'dropout': 0.24746991618068104, 'batch_size': 16} evals 8
+[PSO seed 202] it  1 gbest 0.9908 mean 0.9832 hp {'hidden': 39, 'lr': 0.002915325098161932, 'seq_len': 20, 'dropout': 0.2459924711655529, 'batch_size': 32} evals 16
+[PSO seed 202] it  2 gbest 0.9933 mean 0.9586 hp {'hidden': 27, 'lr': 0.004026640909783999, 'seq_len': 21, 'dropout': 0.26392150648117785, 'batch_size': 32} evals 24
+[PSO seed 202] it  3 gbest 0.9933 mean 0.9777 hp {'hidden': 27, 'lr': 0.004026640909783999, 'seq_len': 21, 'dropout': 0.26392150648117785, 'batch_size': 32} evals 32
+[PSO seed 202] it  4 gbest 0.9933 mean 0.9661 hp {'hidden': 27, 'lr': 0.004026640909783999, 'seq_len': 21, 'dropout': 0.26392150648117785, 'batch_size': 32} evals 40
+[PSO seed 202] it  5 gbest 0.9934 mean 0.9600 hp {'hidden': 27, 'lr': 0.0036310066214160787, 'seq_len': 23, 'dropout': 0.3289722098172577, 'batch_size': 32} evals 48
+[PSO seed 202] it  6 gbest 0.9940 mean 0.9863 hp {'hidden': 25, 'lr': 0.002799855876246183, 'seq_len': 21, 'dropout': 0.3194037081385896, 'batch_size': 32} evals 56
+[PSO seed 202] it  7 gbest 0.9940 mean 0.9822 hp {'hidden': 25, 'lr': 0.002799855876246183, 'seq_len': 21, 'dropout': 0.3194037081385896, 'batch_size': 32} evals 64
+[PSO seed 202] it  8 gbest 0.9940 mean 0.9781 hp {'hidden': 25, 'lr': 0.002799855876246183, 'seq_len': 21, 'dropout': 0.3194037081385896, 'batch_size': 32} evals 72
+[PSO seed 202] it  9 gbest 0.9940 mean 0.9843 hp {'hidden': 25, 'lr': 0.002799855876246183, 'seq_len': 21, 'dropout': 0.3194037081385896, 'batch_size': 32} evals 80
+[PSO seed 202] it 10 gbest 0.9940 mean 0.9830 hp {'hidden': 25, 'lr': 0.002799855876246183, 'seq_len': 21, 'dropout': 0.3194037081385896, 'batch_size': 32} evals 88
+seed 202: gbest 0.9940 hp {'hidden': 25, 'lr': 0.002799855876246183, 'seq_len': 21, 'dropout': 0.3194037081385896, 'batch_size': 32} evals 88 time 352.6s
+[PSO seed 303] it  0 gbest 0.9876 mean 0.9604 hp {'hidden': 78, 'lr': 0.01946498856641937, 'seq_len': 19, 'dropout': 0.47399276987450073, 'batch_size': 64} evals 8
+[PSO seed 303] it  1 gbest 0.9876 mean 0.9452 hp {'hidden': 78, 'lr': 0.01946498856641937, 'seq_len': 19, 'dropout': 0.47399276987450073, 'batch_size': 64} evals 16
+[PSO seed 303] it  2 gbest 0.9876 mean 0.9204 hp {'hidden': 78, 'lr': 0.01946498856641937, 'seq_len': 19, 'dropout': 0.47399276987450073, 'batch_size': 64} evals 24
+[PSO seed 303] it  3 gbest 0.9905 mean 0.9283 hp {'hidden': 67, 'lr': 0.012109202033165657, 'seq_len': 20, 'dropout': 0.36762885048066707, 'batch_size': 64} evals 32
+[PSO seed 303] it  4 gbest 0.9914 mean 0.9537 hp {'hidden': 62, 'lr': 0.006264946524109392, 'seq_len': 17, 'dropout': 0.4224855857851105, 'batch_size': 32} evals 40
+[PSO seed 303] it  5 gbest 0.9936 mean 0.9690 hp {'hidden': 26, 'lr': 0.004274963547725832, 'seq_len': 12, 'dropout': 0.27480191994909975, 'batch_size': 32} evals 48
+[PSO seed 303] it  6 gbest 0.9941 mean 0.9716 hp {'hidden': 36, 'lr': 0.004637230499174914, 'seq_len': 16, 'dropout': 0.2439504495824293, 'batch_size': 32} evals 56
+[PSO seed 303] it  7 gbest 0.9941 mean 0.9541 hp {'hidden': 36, 'lr': 0.004637230499174914, 'seq_len': 16, 'dropout': 0.2439504495824293, 'batch_size': 32} evals 64
+[PSO seed 303] it  8 gbest 0.9941 mean 0.9848 hp {'hidden': 36, 'lr': 0.004637230499174914, 'seq_len': 16, 'dropout': 0.2439504495824293, 'batch_size': 32} evals 72
+[PSO seed 303] it  9 gbest 0.9941 mean 0.9568 hp {'hidden': 36, 'lr': 0.004637230499174914, 'seq_len': 16, 'dropout': 0.2439504495824293, 'batch_size': 32} evals 80
+[PSO seed 303] it 10 gbest 0.9941 mean 0.9709 hp {'hidden': 36, 'lr': 0.004637230499174914, 'seq_len': 16, 'dropout': 0.2439504495824293, 'batch_size': 32} evals 88
+seed 303: gbest 0.9941 hp {'hidden': 36, 'lr': 0.004637230499174914, 'seq_len': 16, 'dropout': 0.2439504495824293, 'batch_size': 32} evals 88 time 375.2s
+FINAL hp: {'hidden': 36, 'lr': 0.004637230499174914, 'seq_len': 16, 'dropout': 0.2439504495824293, 'batch_size': 32} val score 0.9941

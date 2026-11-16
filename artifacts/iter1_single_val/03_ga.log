@@ -1,0 +1,63 @@
+started 2026-11-15 22:09:01
+[GA seed 11] gen  0 best 0.9845 mean 0.8569 nfeat 8 evals 20
+[GA seed 11] gen  1 best 0.9845 mean 0.9299 nfeat 8 evals 38
+[GA seed 11] gen  2 best 0.9845 mean 0.9547 nfeat 8 evals 52
+[GA seed 11] gen  3 best 0.9845 mean 0.9680 nfeat 8 evals 66
+[GA seed 11] gen  4 best 0.9845 mean 0.9484 nfeat 8 evals 78
+[GA seed 11] gen  5 best 0.9845 mean 0.9770 nfeat 8 evals 91
+[GA seed 11] gen  6 best 0.9880 mean 0.9622 nfeat 5 evals 104
+[GA seed 11] gen  7 best 0.9880 mean 0.9700 nfeat 5 evals 112
+[GA seed 11] gen  8 best 0.9880 mean 0.9723 nfeat 5 evals 123
+[GA seed 11] gen  9 best 0.9880 mean 0.9496 nfeat 5 evals 133
+[GA seed 11] gen 10 best 0.9880 mean 0.9755 nfeat 5 evals 140
+[GA seed 11] gen 11 best 0.9880 mean 0.9598 nfeat 5 evals 150
+[GA seed 11] gen 12 best 0.9880 mean 0.9811 nfeat 5 evals 157
+seed 11: best fitness 0.9880 f1 0.9992 features ['S3_Temp', 'S4_Temp', 'S1_Light', 'S2_Light', 'S4_Light'] evals 157 time 93.6s
+[GA seed 22] gen  0 best 0.9853 mean 0.8805 nfeat 8 evals 20
+[GA seed 22] gen  1 best 0.9853 mean 0.9389 nfeat 8 evals 37
+[GA seed 22] gen  2 best 0.9853 mean 0.9359 nfeat 8 evals 55
+[GA seed 22] gen  3 best 0.9865 mean 0.9660 nfeat 8 evals 72
+[GA seed 22] gen  4 best 0.9865 mean 0.9751 nfeat 8 evals 85
+[GA seed 22] gen  5 best 0.9865 mean 0.9643 nfeat 8 evals 100
+[GA seed 22] gen  6 best 0.9865 mean 0.9710 nfeat 8 evals 115
+[GA seed 22] gen  7 best 0.9865 mean 0.9726 nfeat 8 evals 128
+[GA seed 22] gen  8 best 0.9865 mean 0.9698 nfeat 8 evals 139
+[GA seed 22] gen  9 best 0.9865 mean 0.9769 nfeat 8 evals 151
+seed 22: best fitness 0.9865 f1 1.0000 features ['S3_Temp', 'S4_Temp', 'S1_Light', 'S2_Light', 'S3_Light', 'S4_Light', 'S2_Sound', 'S6_PIR'] evals 151 time 91.6s
+[GA seed 33] gen  0 best 0.9851 mean 0.9180 nfeat 6 evals 20
+[GA seed 33] gen  1 best 0.9851 mean 0.9505 nfeat 6 evals 37
+[GA seed 33] gen  2 best 0.9851 mean 0.9505 nfeat 6 evals 54
+[GA seed 33] gen  3 best 0.9851 mean 0.9685 nfeat 6 evals 69
+[GA seed 33] gen  4 best 0.9851 mean 0.9672 nfeat 6 evals 83
+[GA seed 33] gen  5 best 0.9851 mean 0.9712 nfeat 6 evals 100
+[GA seed 33] gen  6 best 0.9851 mean 0.9725 nfeat 6 evals 111
+seed 33: best fitness 0.9851 f1 0.9976 features ['S1_Temp', 'S2_Temp', 'S1_Light', 'S2_Light', 'S4_Light', 'S5_CO2'] evals 111 time 69.3s
+[GA seed 44] gen  0 best 0.9812 mean 0.8766 nfeat 8 evals 20
+[GA seed 44] gen  1 best 0.9812 mean 0.9541 nfeat 8 evals 37
+[GA seed 44] gen  2 best 0.9855 mean 0.9474 nfeat 5 evals 55
+[GA seed 44] gen  3 best 0.9855 mean 0.9703 nfeat 5 evals 72
+[GA seed 44] gen  4 best 0.9878 mean 0.9724 nfeat 3 evals 88
+[GA seed 44] gen  5 best 0.9878 mean 0.9698 nfeat 3 evals 101
+[GA seed 44] gen  6 best 0.9878 mean 0.9557 nfeat 3 evals 114
+[GA seed 44] gen  7 best 0.9892 mean 0.9655 nfeat 5 evals 129
+[GA seed 44] gen  8 best 0.9904 mean 0.9813 nfeat 4 evals 144
+[GA seed 44] gen  9 best 0.9904 mean 0.9739 nfeat 4 evals 156
+[GA seed 44] gen 10 best 0.9904 mean 0.9840 nfeat 4 evals 164
+[GA seed 44] gen 11 best 0.9904 mean 0.9758 nfeat 4 evals 171
+[GA seed 44] gen 12 best 0.9904 mean 0.9700 nfeat 4 evals 179
+[GA seed 44] gen 13 best 0.9904 mean 0.9800 nfeat 4 evals 185
+[GA seed 44] gen 14 best 0.9904 mean 0.9724 nfeat 4 evals 191
+seed 44: best fitness 0.9904 f1 1.0000 features ['S1_Temp', 'S4_Temp', 'S1_Light', 'S2_Light'] evals 191 time 119.8s
+[GA seed 55] gen  0 best 0.9822 mean 0.8217 nfeat 10 evals 20
+[GA seed 55] gen  1 best 0.9830 mean 0.9355 nfeat 6 evals 36
+[GA seed 55] gen  2 best 0.9847 mean 0.9403 nfeat 9 evals 51
+[GA seed 55] gen  3 best 0.9869 mean 0.9627 nfeat 7 evals 68
+[GA seed 55] gen  4 best 0.9869 mean 0.9780 nfeat 7 evals 84
+[GA seed 55] gen  5 best 0.9869 mean 0.9566 nfeat 7 evals 99
+[GA seed 55] gen  6 best 0.9869 mean 0.9780 nfeat 7 evals 112
+[GA seed 55] gen  7 best 0.9869 mean 0.9753 nfeat 7 evals 124
+[GA seed 55] gen  8 best 0.9869 mean 0.9770 nfeat 7 evals 140
+[GA seed 55] gen  9 best 0.9869 mean 0.9787 nfeat 7 evals 151
+seed 55: best fitness 0.9869 f1 0.9992 features ['S1_Temp', 'S3_Temp', 'S4_Temp', 'S1_Light', 'S2_Light', 'S3_Light', 'S2_Sound'] evals 151 time 96.8s
+FINAL GA features (4): ['S1_Temp', 'S4_Temp', 'S1_Light', 'S2_Light']
+stats {'best_fitness_best': 0.9903881565511614, 'best_fitness_mean': 0.9873823709933246, 'best_fitness_std': 0.0019792550742504162, 'f1_best': 1.0, 'f1_mean': 0.9991839598551489, 'f1_std': 0.0009943113925538712, 'n_features_mean': 6.0, 'total_evals': 761, 'total_time_s': 471.1085433959961}

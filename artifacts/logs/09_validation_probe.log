@@ -1,0 +1,6 @@
+started 2026-11-15 22:37:50
+Semua 16 sensor            single-val score 0.9816 (F1 0.9888) | CV score 0.7901 (F1 0.8249) folds 0.491 0.994 0.989
+Subset GA iterasi 1        single-val score 0.9964 (F1 1.0000) | CV score 0.7156 (F1 0.8005) folds 0.448 0.954 1.000
+Tanpa sensor suhu (12)     single-val score 0.9896 (F1 0.9953) | CV score 0.8685 (F1 0.8780) folds 0.639 1.000 0.995
+Light + CO2 + PIR (8)      single-val score 0.9809 (F1 0.9903) | CV score 0.8931 (F1 0.9068) folds 0.730 1.000 0.990
+Light saja (4)             single-val score 0.5574 (F1 0.7948) | CV score 0.7699 (F1 0.9078) folds 0.985 0.943 0.795

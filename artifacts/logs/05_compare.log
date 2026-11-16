@@ -1,0 +1,25 @@
+started 2026-11-15 23:08:54
+A Baseline NN    seed 0: val F1 1.0000 test F1 0.9197 acc 0.9715 t 3.4s
+A Baseline NN    seed 1: val F1 0.9937 test F1 0.9723 acc 0.9888 t 2.1s
+A Baseline NN    seed 2: val F1 0.9952 test F1 0.9609 acc 0.9842 t 1.5s
+A Baseline NN    seed 3: val F1 0.9984 test F1 0.9389 acc 0.9750 t 2.4s
+A Baseline NN    seed 4: val F1 0.9969 test F1 0.8293 acc 0.9373 t 2.1s
+B GA + NN        seed 0: val F1 0.9968 test F1 0.9716 acc 0.9878 t 2.7s
+B GA + NN        seed 1: val F1 0.9968 test F1 0.9637 acc 0.9842 t 1.1s
+B GA + NN        seed 2: val F1 0.9968 test F1 0.9793 acc 0.9903 t 2.0s
+B GA + NN        seed 3: val F1 0.9968 test F1 0.9764 acc 0.9908 t 1.3s
+B GA + NN        seed 4: val F1 0.9968 test F1 0.9754 acc 0.9893 t 0.9s
+C PSO + NN       seed 0: val F1 0.9969 test F1 0.9564 acc 0.9847 t 4.5s
+C PSO + NN       seed 1: val F1 0.9952 test F1 0.8732 acc 0.9511 t 4.5s
+C PSO + NN       seed 2: val F1 1.0000 test F1 0.8054 acc 0.9317 t 3.7s
+C PSO + NN       seed 3: val F1 0.9968 test F1 0.9507 acc 0.9796 t 4.3s
+C PSO + NN       seed 4: val F1 1.0000 test F1 0.8868 acc 0.9572 t 7.0s
+D GA + PSO + NN  seed 0: val F1 1.0000 test F1 0.9934 acc 0.9964 t 3.7s
+D GA + PSO + NN  seed 1: val F1 0.9965 test F1 0.9932 acc 0.9964 t 4.8s
+D GA + PSO + NN  seed 2: val F1 0.9965 test F1 0.9853 acc 0.9922 t 3.4s
+D GA + PSO + NN  seed 3: val F1 0.9965 test F1 0.9729 acc 0.9875 t 1.8s
+D GA + PSO + NN  seed 4: val F1 0.9824 test F1 0.9808 acc 0.9896 t 4.3s
+A Baseline NN    nfeat 16 | val F1 0.9968+-0.0025 | test F1 0.9242+-0.0568 | test acc 0.9714 | time 2.3s
+B GA + NN        nfeat  8 | val F1 0.9968+-0.0000 | test F1 0.9733+-0.0060 | test acc 0.9885 | time 1.6s
+C PSO + NN       nfeat 16 | val F1 0.9978+-0.0021 | test F1 0.8945+-0.0621 | test acc 0.9609 | time 4.8s
+D GA + PSO + NN  nfeat  8 | val F1 0.9944+-0.0068 | test F1 0.9851+-0.0087 | test acc 0.9924 | time 3.6s

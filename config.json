@@ -1,0 +1,139 @@
+{
+  "project": "Smart Room Occupancy Estimation - Hybrid GA-PSO-RNN-Fuzzy",
+  "group": "Kelas B - Kelompok 15",
+  "dataset_file": "data/Occupancy_Estimation.csv",
+  "target": "Room_Occupancy_Count",
+  "sensor_features": [
+    "S1_Temp",
+    "S2_Temp",
+    "S3_Temp",
+    "S4_Temp",
+    "S1_Light",
+    "S2_Light",
+    "S3_Light",
+    "S4_Light",
+    "S1_Sound",
+    "S2_Sound",
+    "S3_Sound",
+    "S4_Sound",
+    "S5_CO2",
+    "S5_CO2_Slope",
+    "S6_PIR",
+    "S7_PIR"
+  ],
+  "split": {
+    "method": "chronological_per_session",
+    "train": 0.6,
+    "val": 0.2,
+    "test": 0.2
+  },
+  "max_gap_seconds": 120,
+  "global_seed": 42,
+  "baseline_hparams": {
+    "hidden": 32,
+    "lr": 0.005,
+    "seq_len": 10,
+    "dropout": 0.0,
+    "batch_size": 64
+  },
+  "train": {
+    "max_epochs": 60,
+    "patience": 10,
+    "clip": 5.0,
+    "l2": 0.0001
+  },
+  "ga": {
+    "pop_size": 20,
+    "generations": 20,
+    "tournament_k": 3,
+    "p_crossover": 0.9,
+    "p_mutation": 0.0625,
+    "elitism": 2,
+    "patience": 6,
+    "lambda_size": 0.02,
+    "seeds": [
+      11,
+      22,
+      33,
+      44,
+      55
+    ],
+    "fitness_model": {
+      "hidden": 16,
+      "lr": 0.01,
+      "seq_len": 10,
+      "dropout": 0.0,
+      "batch_size": 64,
+      "max_epochs": 8,
+      "patience": 3
+    },
+    "ce_weight": 1.0,
+    "cv_seeds": [
+      0
+    ]
+  },
+  "pso": {
+    "swarm_size": 8,
+    "iterations": 10,
+    "w_start": 0.9,
+    "w_end": 0.4,
+    "c1": 1.5,
+    "c2": 1.5,
+    "vmax_frac": 0.2,
+    "patience": 4,
+    "seeds": [
+      101,
+      202,
+      303
+    ],
+    "max_epochs": 12,
+    "train_patience": 4,
+    "bounds": {
+      "hidden": [
+        8,
+        96
+      ],
+      "log10_lr": [
+        -3.5,
+        -1.5
+      ],
+      "seq_len": [
+        4,
+        30
+      ],
+      "dropout": [
+        0.0,
+        0.5
+      ],
+      "log2_batch": [
+        4,
+        7
+      ]
+    },
+    "ce_weight": 1.0,
+    "cv_seeds": [
+      0
+    ]
+  },
+  "final_train_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "cv_folds": [
+    [
+      0.3,
+      0.45
+    ],
+    [
+      0.45,
+      0.6
+    ],
+    [
+      0.6,
+      0.8
+    ]
+  ]
+}

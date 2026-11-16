@@ -1,0 +1,207 @@
+{
+  "folds": [
+    [
+      0.3,
+      0.45
+    ],
+    [
+      0.45,
+      0.6
+    ],
+    [
+      0.6,
+      0.8
+    ]
+  ],
+  "rows": [
+    {
+      "subset": "Semua 16 sensor",
+      "features": [
+        "S1_Temp",
+        "S2_Temp",
+        "S3_Temp",
+        "S4_Temp",
+        "S1_Light",
+        "S2_Light",
+        "S3_Light",
+        "S4_Light",
+        "S1_Sound",
+        "S2_Sound",
+        "S3_Sound",
+        "S4_Sound",
+        "S5_CO2",
+        "S5_CO2_Slope",
+        "S6_PIR",
+        "S7_PIR"
+      ],
+      "single_val_score": 0.981621820602871,
+      "single_val_f1": 0.9888381896413702,
+      "cv_score": 0.7900897817563374,
+      "cv_f1": 0.8248971895979061,
+      "cv_per_fold": [
+        {
+          "fold": 0,
+          "seed": 0,
+          "f1": 0.4914089347079038,
+          "log_loss": 0.09265733153251224
+        },
+        {
+          "fold": 1,
+          "seed": 0,
+          "f1": 0.9944444444444445,
+          "log_loss": 0.004548522953694993
+        },
+        {
+          "fold": 2,
+          "seed": 0,
+          "f1": 0.9888381896413702,
+          "log_loss": 0.007216369038499176
+        }
+      ]
+    },
+    {
+      "subset": "Subset GA iterasi 1",
+      "features": [
+        "S1_Temp",
+        "S4_Temp",
+        "S1_Light",
+        "S2_Light"
+      ],
+      "single_val_score": 0.9964009780501242,
+      "single_val_f1": 1.0,
+      "cv_score": 0.7155554093644356,
+      "cv_f1": 0.8005310228054023,
+      "cv_per_fold": [
+        {
+          "fold": 0,
+          "seed": 0,
+          "f1": 0.4479733870288307,
+          "log_loss": 0.2283221824207155
+        },
+        {
+          "fold": 1,
+          "seed": 0,
+          "f1": 0.9536196813873765,
+          "log_loss": 0.023005635952308603
+        },
+        {
+          "fold": 2,
+          "seed": 0,
+          "f1": 1.0,
+          "log_loss": 0.003599021949875855
+        }
+      ]
+    },
+    {
+      "subset": "Tanpa sensor suhu (12)",
+      "features": [
+        "S1_Light",
+        "S2_Light",
+        "S3_Light",
+        "S4_Light",
+        "S1_Sound",
+        "S2_Sound",
+        "S3_Sound",
+        "S4_Sound",
+        "S5_CO2",
+        "S5_CO2_Slope",
+        "S6_PIR",
+        "S7_PIR"
+      ],
+      "single_val_score": 0.9895594676207677,
+      "single_val_f1": 0.9952688943027437,
+      "cv_score": 0.8684824840115511,
+      "cv_f1": 0.8779928572406995,
+      "cv_per_fold": [
+        {
+          "fold": 0,
+          "seed": 0,
+          "f1": 0.6387096774193548,
+          "log_loss": 0.020238750182868435
+        },
+        {
+          "fold": 1,
+          "seed": 0,
+          "f1": 1.0,
+          "log_loss": 0.0025829428226008533
+        },
+        {
+          "fold": 2,
+          "seed": 0,
+          "f1": 0.9952688943027437,
+          "log_loss": 0.005709426681975884
+        }
+      ]
+    },
+    {
+      "subset": "Light + CO2 + PIR (8)",
+      "features": [
+        "S1_Light",
+        "S2_Light",
+        "S3_Light",
+        "S4_Light",
+        "S5_CO2",
+        "S5_CO2_Slope",
+        "S6_PIR",
+        "S7_PIR"
+      ],
+      "single_val_score": 0.9809090959101003,
+      "single_val_f1": 0.9903225806451612,
+      "cv_score": 0.893077284813191,
+      "cv_f1": 0.906783876433887,
+      "cv_per_fold": [
+        {
+          "fold": 0,
+          "seed": 0,
+          "f1": 0.7300290486564996,
+          "log_loss": 0.027895034116367783
+        },
+        {
+          "fold": 1,
+          "seed": 0,
+          "f1": 1.0,
+          "log_loss": 0.0038112560106593066
+        },
+        {
+          "fold": 2,
+          "seed": 0,
+          "f1": 0.9903225806451612,
+          "log_loss": 0.009413484735060925
+        }
+      ]
+    },
+    {
+      "subset": "Light saja (4)",
+      "features": [
+        "S1_Light",
+        "S2_Light",
+        "S3_Light",
+        "S4_Light"
+      ],
+      "single_val_score": 0.5573556015561927,
+      "single_val_f1": 0.7947507246014939,
+      "cv_score": 0.7699353945577807,
+      "cv_f1": 0.9077518316191213,
+      "cv_per_fold": [
+        {
+          "fold": 0,
+          "seed": 0,
+          "f1": 0.9850279109420317,
+          "log_loss": 0.07844491825926979
+        },
+        {
+          "fold": 1,
+          "seed": 0,
+          "f1": 0.9434768593138383,
+          "log_loss": 0.09760926987945079
+        },
+        {
+          "fold": 2,
+          "seed": 0,
+          "f1": 0.7947507246014939,
+          "log_loss": 0.23739512304530122
+        }
+      ]
+    }
+  ]
+}

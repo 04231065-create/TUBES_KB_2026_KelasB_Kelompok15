@@ -1,0 +1,1333 @@
+{
+  "config": {
+    "pop_size": 20,
+    "generations": 20,
+    "tournament_k": 3,
+    "p_crossover": 0.9,
+    "p_mutation": 0.0625,
+    "elitism": 2,
+    "patience": 6,
+    "lambda_size": 0.02,
+    "seeds": [
+      11,
+      22,
+      33,
+      44,
+      55
+    ],
+    "fitness_model": {
+      "hidden": 16,
+      "lr": 0.01,
+      "seq_len": 10,
+      "dropout": 0.0,
+      "batch_size": 64,
+      "max_epochs": 8,
+      "patience": 3
+    },
+    "ce_weight": 1.0,
+    "cv_seeds": [
+      0
+    ]
+  },
+  "features": [
+    "S1_Temp",
+    "S2_Temp",
+    "S3_Temp",
+    "S4_Temp",
+    "S1_Light",
+    "S2_Light",
+    "S3_Light",
+    "S4_Light",
+    "S1_Sound",
+    "S2_Sound",
+    "S3_Sound",
+    "S4_Sound",
+    "S5_CO2",
+    "S5_CO2_Slope",
+    "S6_PIR",
+    "S7_PIR"
+  ],
+  "runs": [
+    {
+      "seed": 11,
+      "best_chromosome": "0000111000110001",
+      "best_fitness": 0.9813119734369142,
+      "best_info": {
+        "fitness": 0.9813119734369142,
+        "score": 0.9888119734369142,
+        "f1": 0.9965447167784243,
+        "log_loss": 0.007732743341510074,
+        "acc": 0.9991429931201489,
+        "per_fold": [
+          {
+            "fold": 0,
+            "seed": 0,
+            "f1": 0.9928604939512752,
+            "log_loss": 0.01072363856988456
+          },
+          {
+            "fold": 1,
+            "seed": 0,
+            "f1": 1.0,
+            "log_loss": 0.0025746894557672336
+          },
+          {
+            "fold": 2,
+            "seed": 0,
+            "f1": 0.9967736563839974,
+            "log_loss": 0.009899901998878427
+          }
+        ],
+        "n_features": 6,
+        "time_s": 0.7556371688842773
+      },
+      "history": [
+        {
+          "generation": 0,
+          "best_fitness": 0.8175834292498024,
+          "mean_fitness": 0.6921598220959794,
+          "std_fitness": 0.06993646534053195,
+          "best_f1": 0.8535391719876442,
+          "best_n_features": 7,
+          "best_chromosome": "0000101011011010",
+          "evals_cum": 20,
+          "elapsed_s": 14.72599458694458
+        },
+        {
+          "generation": 1,
+          "best_fitness": 0.964139568462306,
+          "mean_fitness": 0.7351050820544244,
+          "std_fitness": 0.08395482555431535,
+          "best_f1": 0.9840775040314659,
+          "best_n_features": 9,
+          "best_chromosome": "0000111110100111",
+          "evals_cum": 36,
+          "elapsed_s": 26.322871208190918
+        },
+        {
+          "generation": 2,
+          "best_fitness": 0.9719656330361607,
+          "mean_fitness": 0.7713848747781376,
+          "std_fitness": 0.11117393337708822,
+          "best_f1": 0.990451106767722,
+          "best_n_features": 9,
+          "best_chromosome": "0000111011011101",
+          "evals_cum": 54,
+          "elapsed_s": 39.5186710357666
+        },
+        {
+          "generation": 3,
+          "best_fitness": 0.9809921879899263,
+          "mean_fitness": 0.8286962447471555,
+          "std_fitness": 0.10617987164837715,
+          "best_f1": 0.9969869104906076,
+          "best_n_features": 8,
+          "best_chromosome": "0000111010111001",
+          "evals_cum": 70,
+          "elapsed_s": 51.35745859146118
+        },
+        {
+          "generation": 4,
+          "best_fitness": 0.9809921879899263,
+          "mean_fitness": 0.877079040203759,
+          "std_fitness": 0.06686838365165232,
+          "best_f1": 0.9969869104906076,
+          "best_n_features": 8,
+          "best_chromosome": "0000111010111001",
+          "evals_cum": 82,
+          "elapsed_s": 61.56708645820618
+        },
+        {
+          "generation": 5,
+          "best_fitness": 0.9809921879899263,
+          "mean_fitness": 0.8731569435494111,
+          "std_fitness": 0.08744111986881863,
+          "best_f1": 0.9969869104906076,
+          "best_n_features": 8,
+          "best_chromosome": "0000111010111001",
+          "evals_cum": 96,
+          "elapsed_s": 72.31907224655151
+        },
+        {
+          "generation": 6,
+          "best_fitness": 0.9809921879899263,
+          "mean_fitness": 0.9189460986900407,
+          "std_fitness": 0.05818042271410237,
+          "best_f1": 0.9969869104906076,
+          "best_n_features": 8,
+          "best_chromosome": "0000111010111001",
+          "evals_cum": 109,
+          "elapsed_s": 82.14318132400513
+        },
+        {
+          "generation": 7,
+          "best_fitness": 0.9813119734369142,
+          "mean_fitness": 0.8899868948660143,
+          "std_fitness": 0.07839141468899502,
+          "best_f1": 0.9965447167784243,
+          "best_n_features": 6,
+          "best_chromosome": "0000111000110001",
+          "evals_cum": 123,
+          "elapsed_s": 93.0396637916565
+        },
+        {
+          "generation": 8,
+          "best_fitness": 0.9813119734369142,
+          "mean_fitness": 0.9079490456792157,
+          "std_fitness": 0.08016115294242325,
+          "best_f1": 0.9965447167784243,
+          "best_n_features": 6,
+          "best_chromosome": "0000111000110001",
+          "evals_cum": 135,
+          "elapsed_s": 104.63408613204956
+        },
+        {
+          "generation": 9,
+          "best_fitness": 0.9813119734369142,
+          "mean_fitness": 0.9191979388265935,
+          "std_fitness": 0.06724941881544015,
+          "best_f1": 0.9965447167784243,
+          "best_n_features": 6,
+          "best_chromosome": "0000111000110001",
+          "evals_cum": 148,
+          "elapsed_s": 115.80305123329163
+        },
+        {
+          "generation": 10,
+          "best_fitness": 0.9813119734369142,
+          "mean_fitness": 0.9063921420985712,
+          "std_fitness": 0.0850514362139155,
+          "best_f1": 0.9965447167784243,
+          "best_n_features": 6,
+          "best_chromosome": "0000111000110001",
+          "evals_cum": 158,
+          "elapsed_s": 123.77984952926636
+        },
+        {
+          "generation": 11,
+          "best_fitness": 0.9813119734369142,
+          "mean_fitness": 0.8622150239313378,
+          "std_fitness": 0.09468180903914947,
+          "best_f1": 0.9965447167784243,
+          "best_n_features": 6,
+          "best_chromosome": "0000111000110001",
+          "evals_cum": 169,
+          "elapsed_s": 131.21251916885376
+        },
+        {
+          "generation": 12,
+          "best_fitness": 0.9813119734369142,
+          "mean_fitness": 0.8552437500453403,
+          "std_fitness": 0.08263426952512322,
+          "best_f1": 0.9965447167784243,
+          "best_n_features": 6,
+          "best_chromosome": "0000111000110001",
+          "evals_cum": 178,
+          "elapsed_s": 138.2971272468567
+        },
+        {
+          "generation": 13,
+          "best_fitness": 0.9813119734369142,
+          "mean_fitness": 0.881688532819952,
+          "std_fitness": 0.09584682059959586,
+          "best_f1": 0.9965447167784243,
+          "best_n_features": 6,
+          "best_chromosome": "0000111000110001",
+          "evals_cum": 190,
+          "elapsed_s": 148.1817033290863
+        }
+      ],
+      "n_evals": 190,
+      "time_s": 148.18180131912231,
+      "final_population": [
+        "0000111000110001",
+        "0000111000110001",
+        "0100111000110101",
+        "0110111100110001",
+        "0010111000010001",
+        "0010111000110100",
+        "0000111000110001",
+        "0000111000110001",
+        "0100111000000000",
+        "0000111000110001",
+        "0000111100000001",
+        "0000111001100001",
+        "0110111001110101",
+        "1000111010110001",
+        "1000100000110001",
+        "0010111000110001",
+        "0000111100110101",
+        "0000111000111101",
+        "0000111010110001",
+        "0010110000011001"
+      ],
+      "selected_features": [
+        "S1_Light",
+        "S2_Light",
+        "S3_Light",
+        "S3_Sound",
+        "S4_Sound",
+        "S7_PIR"
+      ]
+    },
+    {
+      "seed": 22,
+      "best_chromosome": "0000111110010011",
+      "best_fitness": 0.9854378143202098,
+      "best_info": {
+        "fitness": 0.9854378143202098,
+        "score": 0.9954378143202098,
+        "f1": 1.0,
+        "log_loss": 0.004562185679790214,
+        "acc": 1.0,
+        "per_fold": [
+          {
+            "fold": 0,
+            "seed": 0,
+            "f1": 1.0,
+            "log_loss": 0.005900826995805275
+          },
+          {
+            "fold": 1,
+            "seed": 0,
+            "f1": 1.0,
+            "log_loss": 0.003239590732177765
+          },
+          {
+            "fold": 2,
+            "seed": 0,
+            "f1": 1.0,
+            "log_loss": 0.004546139311387605
+          }
+        ],
+        "n_features": 8,
+        "time_s": 1.0581693649291992
+      },
+      "history": [
+        {
+          "generation": 0,
+          "best_fitness": 0.8074056780900166,
+          "mean_fitness": 0.7028744890742036,
+          "std_fitness": 0.06964943327322765,
+          "best_f1": 0.8529604366933704,
+          "best_n_features": 9,
+          "best_chromosome": "0100100110111110",
+          "evals_cum": 20,
+          "elapsed_s": 18.121721267700195
+        },
+        {
+          "generation": 1,
+          "best_fitness": 0.8347139593019953,
+          "mean_fitness": 0.7400847213536499,
+          "std_fitness": 0.0787042049114778,
+          "best_f1": 0.8842145876668756,
+          "best_n_features": 6,
+          "best_chromosome": "0100110000100011",
+          "evals_cum": 35,
+          "elapsed_s": 30.403191328048706
+        },
+        {
+          "generation": 2,
+          "best_fitness": 0.900077840598163,
+          "mean_fitness": 0.7705907396453954,
+          "std_fitness": 0.06004199471412308,
+          "best_f1": 0.9307544047365269,
+          "best_n_features": 9,
+          "best_chromosome": "0010111010011110",
+          "evals_cum": 53,
+          "elapsed_s": 44.456780433654785
+        },
+        {
+          "generation": 3,
+          "best_fitness": 0.900077840598163,
+          "mean_fitness": 0.7784914323175859,
+          "std_fitness": 0.0755485388290513,
+          "best_f1": 0.9307544047365269,
+          "best_n_features": 9,
+          "best_chromosome": "0010111010011110",
+          "evals_cum": 68,
+          "elapsed_s": 55.47940278053284
+        },
+        {
+          "generation": 4,
+          "best_fitness": 0.9106286021901037,
+          "mean_fitness": 0.7969134599251901,
+          "std_fitness": 0.0756383195944319,
+          "best_f1": 0.9307103714998451,
+          "best_n_features": 9,
+          "best_chromosome": "0000111101111010",
+          "evals_cum": 85,
+          "elapsed_s": 68.22215938568115
+        },
+        {
+          "generation": 5,
+          "best_fitness": 0.9530786613494129,
+          "mean_fitness": 0.8124771969950642,
+          "std_fitness": 0.07959548306375365,
+          "best_f1": 0.9754398526298164,
+          "best_n_features": 8,
+          "best_chromosome": "0000111010011110",
+          "evals_cum": 99,
+          "elapsed_s": 80.88388586044312
+        },
+        {
+          "generation": 6,
+          "best_fitness": 0.9694702494496324,
+          "mean_fitness": 0.8413653336564014,
+          "std_fitness": 0.10192971304182456,
+          "best_f1": 0.9912171244510307,
+          "best_n_features": 9,
+          "best_chromosome": "0000111010111110",
+          "evals_cum": 115,
+          "elapsed_s": 93.40571403503418
+        },
+        {
+          "generation": 7,
+          "best_fitness": 0.9767412561936238,
+          "mean_fitness": 0.8688877082347914,
+          "std_fitness": 0.08333245541350982,
+          "best_f1": 0.9960578390140175,
+          "best_n_features": 10,
+          "best_chromosome": "0000111110110111",
+          "evals_cum": 126,
+          "elapsed_s": 102.16384148597717
+        },
+        {
+          "generation": 8,
+          "best_fitness": 0.9767412561936238,
+          "mean_fitness": 0.8984743621445995,
+          "std_fitness": 0.08361292276015382,
+          "best_f1": 0.9960578390140175,
+          "best_n_features": 10,
+          "best_chromosome": "0000111110110111",
+          "evals_cum": 138,
+          "elapsed_s": 112.38146424293518
+        },
+        {
+          "generation": 9,
+          "best_fitness": 0.9767412561936238,
+          "mean_fitness": 0.8991212773933889,
+          "std_fitness": 0.07349670424664154,
+          "best_f1": 0.9960578390140175,
+          "best_n_features": 10,
+          "best_chromosome": "0000111110110111",
+          "evals_cum": 150,
+          "elapsed_s": 122.81117367744446
+        },
+        {
+          "generation": 10,
+          "best_fitness": 0.9767412561936238,
+          "mean_fitness": 0.8756799741137369,
+          "std_fitness": 0.07539930744433399,
+          "best_f1": 0.9960578390140175,
+          "best_n_features": 10,
+          "best_chromosome": "0000111110110111",
+          "evals_cum": 163,
+          "elapsed_s": 134.19482278823853
+        },
+        {
+          "generation": 11,
+          "best_fitness": 0.9827127146358734,
+          "mean_fitness": 0.911072317168658,
+          "std_fitness": 0.07196150058134887,
+          "best_f1": 0.9970727002761474,
+          "best_n_features": 8,
+          "best_chromosome": "0000111110110001",
+          "evals_cum": 173,
+          "elapsed_s": 143.09133100509644
+        },
+        {
+          "generation": 12,
+          "best_fitness": 0.9827127146358734,
+          "mean_fitness": 0.9312457682139488,
+          "std_fitness": 0.07146684865087544,
+          "best_f1": 0.9970727002761474,
+          "best_n_features": 8,
+          "best_chromosome": "0000111110110001",
+          "evals_cum": 183,
+          "elapsed_s": 153.06057357788086
+        },
+        {
+          "generation": 13,
+          "best_fitness": 0.9827127146358734,
+          "mean_fitness": 0.897878918181189,
+          "std_fitness": 0.07014996303111082,
+          "best_f1": 0.9970727002761474,
+          "best_n_features": 8,
+          "best_chromosome": "0000111110110001",
+          "evals_cum": 195,
+          "elapsed_s": 163.05274176597595
+        },
+        {
+          "generation": 14,
+          "best_fitness": 0.9827127146358734,
+          "mean_fitness": 0.8893736984776112,
+          "std_fitness": 0.08617260033104633,
+          "best_f1": 0.9970727002761474,
+          "best_n_features": 8,
+          "best_chromosome": "0000111110110001",
+          "evals_cum": 206,
+          "elapsed_s": 171.33584260940552
+        },
+        {
+          "generation": 15,
+          "best_fitness": 0.9827127146358734,
+          "mean_fitness": 0.9107842330485795,
+          "std_fitness": 0.08941547342882863,
+          "best_f1": 0.9970727002761474,
+          "best_n_features": 8,
+          "best_chromosome": "0000111110110001",
+          "evals_cum": 214,
+          "elapsed_s": 178.35528302192688
+        },
+        {
+          "generation": 16,
+          "best_fitness": 0.9854378143202098,
+          "mean_fitness": 0.8802584315211917,
+          "std_fitness": 0.09269278025762388,
+          "best_f1": 1.0,
+          "best_n_features": 8,
+          "best_chromosome": "0000111110010011",
+          "evals_cum": 227,
+          "elapsed_s": 188.90985989570618
+        },
+        {
+          "generation": 17,
+          "best_fitness": 0.9854378143202098,
+          "mean_fitness": 0.9176357054086692,
+          "std_fitness": 0.08041879210233277,
+          "best_f1": 1.0,
+          "best_n_features": 8,
+          "best_chromosome": "0000111110010011",
+          "evals_cum": 233,
+          "elapsed_s": 193.21776962280273
+        },
+        {
+          "generation": 18,
+          "best_fitness": 0.9854378143202098,
+          "mean_fitness": 0.9210283066599281,
+          "std_fitness": 0.09290346910892701,
+          "best_f1": 1.0,
+          "best_n_features": 8,
+          "best_chromosome": "0000111110010011",
+          "evals_cum": 238,
+          "elapsed_s": 197.1919538974762
+        },
+        {
+          "generation": 19,
+          "best_fitness": 0.9854378143202098,
+          "mean_fitness": 0.9188813228874964,
+          "std_fitness": 0.08912644647373406,
+          "best_f1": 1.0,
+          "best_n_features": 8,
+          "best_chromosome": "0000111110010011",
+          "evals_cum": 248,
+          "elapsed_s": 204.5636019706726
+        },
+        {
+          "generation": 20,
+          "best_fitness": 0.9854378143202098,
+          "mean_fitness": 0.9382868916575816,
+          "std_fitness": 0.06098433016622042,
+          "best_f1": 1.0,
+          "best_n_features": 8,
+          "best_chromosome": "0000111110010011",
+          "evals_cum": 257,
+          "elapsed_s": 211.35509610176086
+        }
+      ],
+      "n_evals": 257,
+      "time_s": 211.3551802635193,
+      "final_population": [
+        "0000111110010011",
+        "0000111110010011",
+        "0000111110010001",
+        "0001111010010011",
+        "0000111110100011",
+        "0000110110011011",
+        "0000111110010011",
+        "0000111110011011",
+        "0110111110010011",
+        "0010111110010011",
+        "0000111110110111",
+        "0000010110011011",
+        "0100111110110011",
+        "0000111110010101",
+        "0000111110011011",
+        "0000011010010011",
+        "0000111010110001",
+        "0000111110110111",
+        "0000111110010011",
+        "0000111110010011"
+      ],
+      "selected_features": [
+        "S1_Light",
+        "S2_Light",
+        "S3_Light",
+        "S4_Light",
+        "S1_Sound",
+        "S4_Sound",
+        "S6_PIR",
+        "S7_PIR"
+      ]
+    },
+    {
+      "seed": 33,
+      "best_chromosome": "0000111110011001",
+      "best_fitness": 0.982404962576455,
+      "best_info": {
+        "fitness": 0.982404962576455,
+        "score": 0.992404962576455,
+        "f1": 0.9981281870797721,
+        "log_loss": 0.005723224503317056,
+        "acc": 0.9996011832690607,
+        "per_fold": [
+          {
+            "fold": 0,
+            "seed": 0,
+            "f1": 0.9976109048553191,
+            "log_loss": 0.00872878021243013
+          },
+          {
+            "fold": 1,
+            "seed": 0,
+            "f1": 1.0,
+            "log_loss": 0.0024875548029456834
+          },
+          {
+            "fold": 2,
+            "seed": 0,
+            "f1": 0.9967736563839974,
+            "log_loss": 0.005953338494575354
+          }
+        ],
+        "n_features": 8,
+        "time_s": 0.7832410335540771
+      },
+      "history": [
+        {
+          "generation": 0,
+          "best_fitness": 0.8391069903554702,
+          "mean_fitness": 0.7079868635022313,
+          "std_fitness": 0.07769652927115153,
+          "best_f1": 0.8747777157509469,
+          "best_n_features": 11,
+          "best_chromosome": "0001111011111011",
+          "evals_cum": 20,
+          "elapsed_s": 14.752024173736572
+        },
+        {
+          "generation": 1,
+          "best_fitness": 0.869542861144423,
+          "mean_fitness": 0.7496251465222292,
+          "std_fitness": 0.07387729182121265,
+          "best_f1": 0.9068076870298794,
+          "best_n_features": 11,
+          "best_chromosome": "1111111101000101",
+          "evals_cum": 37,
+          "elapsed_s": 26.23285174369812
+        },
+        {
+          "generation": 2,
+          "best_fitness": 0.869542861144423,
+          "mean_fitness": 0.7526430776456016,
+          "std_fitness": 0.07541969954419075,
+          "best_f1": 0.9068076870298794,
+          "best_n_features": 11,
+          "best_chromosome": "1111111101000101",
+          "evals_cum": 54,
+          "elapsed_s": 38.78580665588379
+        },
+        {
+          "generation": 3,
+          "best_fitness": 0.940143510951505,
+          "mean_fitness": 0.7751104432737924,
+          "std_fitness": 0.07935729559120083,
+          "best_f1": 0.9808100116745799,
+          "best_n_features": 11,
+          "best_chromosome": "1111111110010001",
+          "evals_cum": 69,
+          "elapsed_s": 50.155967235565186
+        },
+        {
+          "generation": 4,
+          "best_fitness": 0.9719165650894479,
+          "mean_fitness": 0.8146151886428228,
+          "std_fitness": 0.09627926803049,
+          "best_f1": 0.9964997811978759,
+          "best_n_features": 11,
+          "best_chromosome": "1111111101001001",
+          "evals_cum": 86,
+          "elapsed_s": 62.616942405700684
+        },
+        {
+          "generation": 5,
+          "best_fitness": 0.9719165650894479,
+          "mean_fitness": 0.8054386701704672,
+          "std_fitness": 0.0899842828726071,
+          "best_f1": 0.9964997811978759,
+          "best_n_features": 11,
+          "best_chromosome": "1111111101001001",
+          "evals_cum": 104,
+          "elapsed_s": 76.08978509902954
+        },
+        {
+          "generation": 6,
+          "best_fitness": 0.9719165650894479,
+          "mean_fitness": 0.8191292836415037,
+          "std_fitness": 0.08314883199817218,
+          "best_f1": 0.9964997811978759,
+          "best_n_features": 11,
+          "best_chromosome": "1111111101001001",
+          "evals_cum": 116,
+          "elapsed_s": 85.08047747612
+        },
+        {
+          "generation": 7,
+          "best_fitness": 0.9719165650894479,
+          "mean_fitness": 0.8648688224311158,
+          "std_fitness": 0.09527248293645098,
+          "best_f1": 0.9964997811978759,
+          "best_n_features": 11,
+          "best_chromosome": "1111111101001001",
+          "evals_cum": 130,
+          "elapsed_s": 96.05052947998047
+        },
+        {
+          "generation": 8,
+          "best_fitness": 0.982404962576455,
+          "mean_fitness": 0.8696933372798122,
+          "std_fitness": 0.11796408300705966,
+          "best_f1": 0.9981281870797721,
+          "best_n_features": 8,
+          "best_chromosome": "0000111110011001",
+          "evals_cum": 144,
+          "elapsed_s": 106.04661560058594
+        },
+        {
+          "generation": 9,
+          "best_fitness": 0.982404962576455,
+          "mean_fitness": 0.835246457824762,
+          "std_fitness": 0.10006688198833383,
+          "best_f1": 0.9981281870797721,
+          "best_n_features": 8,
+          "best_chromosome": "0000111110011001",
+          "evals_cum": 158,
+          "elapsed_s": 116.34081053733826
+        },
+        {
+          "generation": 10,
+          "best_fitness": 0.982404962576455,
+          "mean_fitness": 0.8773768281641449,
+          "std_fitness": 0.11246751011963697,
+          "best_f1": 0.9981281870797721,
+          "best_n_features": 8,
+          "best_chromosome": "0000111110011001",
+          "evals_cum": 170,
+          "elapsed_s": 124.79720783233643
+        },
+        {
+          "generation": 11,
+          "best_fitness": 0.982404962576455,
+          "mean_fitness": 0.8400274054354016,
+          "std_fitness": 0.10978037447415052,
+          "best_f1": 0.9981281870797721,
+          "best_n_features": 8,
+          "best_chromosome": "0000111110011001",
+          "evals_cum": 183,
+          "elapsed_s": 134.83776783943176
+        },
+        {
+          "generation": 12,
+          "best_fitness": 0.982404962576455,
+          "mean_fitness": 0.8779104066300139,
+          "std_fitness": 0.10256207070177059,
+          "best_f1": 0.9981281870797721,
+          "best_n_features": 8,
+          "best_chromosome": "0000111110011001",
+          "evals_cum": 196,
+          "elapsed_s": 145.54503870010376
+        },
+        {
+          "generation": 13,
+          "best_fitness": 0.982404962576455,
+          "mean_fitness": 0.9357476747001929,
+          "std_fitness": 0.059030971433194177,
+          "best_f1": 0.9981281870797721,
+          "best_n_features": 8,
+          "best_chromosome": "0000111110011001",
+          "evals_cum": 205,
+          "elapsed_s": 151.86885166168213
+        },
+        {
+          "generation": 14,
+          "best_fitness": 0.982404962576455,
+          "mean_fitness": 0.9090421363022403,
+          "std_fitness": 0.11516470412821768,
+          "best_f1": 0.9981281870797721,
+          "best_n_features": 8,
+          "best_chromosome": "0000111110011001",
+          "evals_cum": 217,
+          "elapsed_s": 160.0646996498108
+        }
+      ],
+      "n_evals": 217,
+      "time_s": 160.06476950645447,
+      "final_population": [
+        "0000111110011001",
+        "0000111001000011",
+        "0000111001011101",
+        "0000111010110101",
+        "0100111000000011",
+        "0000111001000010",
+        "0000111010011011",
+        "0000111100011001",
+        "0100110000000010",
+        "0100111000000010",
+        "0000111000010101",
+        "0000111101111011",
+        "0000111000011011",
+        "0000111000011011",
+        "0000111010100011",
+        "0010111001000001",
+        "0000111000000011",
+        "0000111011010011",
+        "0000011001000111",
+        "0000111010100011"
+      ],
+      "selected_features": [
+        "S1_Light",
+        "S2_Light",
+        "S3_Light",
+        "S4_Light",
+        "S1_Sound",
+        "S4_Sound",
+        "S5_CO2",
+        "S7_PIR"
+      ]
+    },
+    {
+      "seed": 44,
+      "best_chromosome": "0000111110010011",
+      "best_fitness": 0.9854378143202098,
+      "best_info": {
+        "fitness": 0.9854378143202098,
+        "score": 0.9954378143202098,
+        "f1": 1.0,
+        "log_loss": 0.004562185679790214,
+        "acc": 1.0,
+        "per_fold": [
+          {
+            "fold": 0,
+            "seed": 0,
+            "f1": 1.0,
+            "log_loss": 0.005900826995805275
+          },
+          {
+            "fold": 1,
+            "seed": 0,
+            "f1": 1.0,
+            "log_loss": 0.003239590732177765
+          },
+          {
+            "fold": 2,
+            "seed": 0,
+            "f1": 1.0,
+            "log_loss": 0.004546139311387605
+          }
+        ],
+        "n_features": 8,
+        "time_s": 0.6934552192687988
+      },
+      "history": [
+        {
+          "generation": 0,
+          "best_fitness": 0.841943205841766,
+          "mean_fitness": 0.6925441412486619,
+          "std_fitness": 0.07640502709595645,
+          "best_f1": 0.8722319849032476,
+          "best_n_features": 8,
+          "best_chromosome": "0100111001100011",
+          "evals_cum": 20,
+          "elapsed_s": 15.13713026046753
+        },
+        {
+          "generation": 1,
+          "best_fitness": 0.9062079864803111,
+          "mean_fitness": 0.7582739990986662,
+          "std_fitness": 0.07579957512710966,
+          "best_f1": 0.9359515194070657,
+          "best_n_features": 5,
+          "best_chromosome": "0100111000000010",
+          "evals_cum": 37,
+          "elapsed_s": 26.629400730133057
+        },
+        {
+          "generation": 2,
+          "best_fitness": 0.9062079864803111,
+          "mean_fitness": 0.767323414418523,
+          "std_fitness": 0.10771239873834693,
+          "best_f1": 0.9359515194070657,
+          "best_n_features": 5,
+          "best_chromosome": "0100111000000010",
+          "evals_cum": 52,
+          "elapsed_s": 36.4257276058197
+        },
+        {
+          "generation": 3,
+          "best_fitness": 0.9062079864803111,
+          "mean_fitness": 0.8194130823176471,
+          "std_fitness": 0.057697219085198564,
+          "best_f1": 0.9359515194070657,
+          "best_n_features": 5,
+          "best_chromosome": "0100111000000010",
+          "evals_cum": 69,
+          "elapsed_s": 48.43969774246216
+        },
+        {
+          "generation": 4,
+          "best_fitness": 0.9062079864803111,
+          "mean_fitness": 0.8156242956079824,
+          "std_fitness": 0.06211011404837325,
+          "best_f1": 0.9359515194070657,
+          "best_n_features": 5,
+          "best_chromosome": "0100111000000010",
+          "evals_cum": 84,
+          "elapsed_s": 59.38595390319824
+        },
+        {
+          "generation": 5,
+          "best_fitness": 0.952938757075506,
+          "mean_fitness": 0.8383354941087839,
+          "std_fitness": 0.06973597425107682,
+          "best_f1": 0.9779968732091661,
+          "best_n_features": 7,
+          "best_chromosome": "0000111010011010",
+          "evals_cum": 98,
+          "elapsed_s": 69.22635984420776
+        },
+        {
+          "generation": 6,
+          "best_fitness": 0.9530786613494129,
+          "mean_fitness": 0.8674164060763443,
+          "std_fitness": 0.0807527716603061,
+          "best_f1": 0.9754398526298164,
+          "best_n_features": 8,
+          "best_chromosome": "0000111010011110",
+          "evals_cum": 110,
+          "elapsed_s": 78.53704190254211
+        },
+        {
+          "generation": 7,
+          "best_fitness": 0.9707292510728525,
+          "mean_fitness": 0.8638070578131385,
+          "std_fitness": 0.08271252437814537,
+          "best_f1": 0.9936171025913113,
+          "best_n_features": 7,
+          "best_chromosome": "0000111100010011",
+          "evals_cum": 123,
+          "elapsed_s": 87.88641476631165
+        },
+        {
+          "generation": 8,
+          "best_fitness": 0.9854378143202098,
+          "mean_fitness": 0.876963181600501,
+          "std_fitness": 0.09959385050808478,
+          "best_f1": 1.0,
+          "best_n_features": 8,
+          "best_chromosome": "0000111110010011",
+          "evals_cum": 137,
+          "elapsed_s": 97.91868185997009
+        },
+        {
+          "generation": 9,
+          "best_fitness": 0.9854378143202098,
+          "mean_fitness": 0.920627572692594,
+          "std_fitness": 0.09061340861121579,
+          "best_f1": 1.0,
+          "best_n_features": 8,
+          "best_chromosome": "0000111110010011",
+          "evals_cum": 146,
+          "elapsed_s": 104.50372099876404
+        },
+        {
+          "generation": 10,
+          "best_fitness": 0.9854378143202098,
+          "mean_fitness": 0.9359667741780872,
+          "std_fitness": 0.06128696916852727,
+          "best_f1": 1.0,
+          "best_n_features": 8,
+          "best_chromosome": "0000111110010011",
+          "evals_cum": 152,
+          "elapsed_s": 108.61128234863281
+        },
+        {
+          "generation": 11,
+          "best_fitness": 0.9854378143202098,
+          "mean_fitness": 0.9295093615278212,
+          "std_fitness": 0.07153320479117473,
+          "best_f1": 1.0,
+          "best_n_features": 8,
+          "best_chromosome": "0000111110010011",
+          "evals_cum": 162,
+          "elapsed_s": 117.08275318145752
+        },
+        {
+          "generation": 12,
+          "best_fitness": 0.9854378143202098,
+          "mean_fitness": 0.9067262066789175,
+          "std_fitness": 0.09526036671608727,
+          "best_f1": 1.0,
+          "best_n_features": 8,
+          "best_chromosome": "0000111110010011",
+          "evals_cum": 169,
+          "elapsed_s": 123.79605507850647
+        },
+        {
+          "generation": 13,
+          "best_fitness": 0.9854378143202098,
+          "mean_fitness": 0.9157179399825663,
+          "std_fitness": 0.09322278499393846,
+          "best_f1": 1.0,
+          "best_n_features": 8,
+          "best_chromosome": "0000111110010011",
+          "evals_cum": 178,
+          "elapsed_s": 131.81831192970276
+        },
+        {
+          "generation": 14,
+          "best_fitness": 0.9854378143202098,
+          "mean_fitness": 0.8985847113453431,
+          "std_fitness": 0.10623406854936747,
+          "best_f1": 1.0,
+          "best_n_features": 8,
+          "best_chromosome": "0000111110010011",
+          "evals_cum": 183,
+          "elapsed_s": 135.302481174469
+        }
+      ],
+      "n_evals": 183,
+      "time_s": 135.30254673957825,
+      "final_population": [
+        "0000111110010011",
+        "0000111110010011",
+        "0000101110010011",
+        "0100111110010011",
+        "0000111110010111",
+        "0000111110010011",
+        "0100111110010011",
+        "0000101110010011",
+        "0000111110010011",
+        "0000111110110011",
+        "0100111110010011",
+        "0000111110010011",
+        "0000111110010011",
+        "0100011110000011",
+        "0000111010010011",
+        "0000111110011011",
+        "0000111110011011",
+        "0000111110010011",
+        "0000111100011001",
+        "0110111000001011"
+      ],
+      "selected_features": [
+        "S1_Light",
+        "S2_Light",
+        "S3_Light",
+        "S4_Light",
+        "S1_Sound",
+        "S4_Sound",
+        "S6_PIR",
+        "S7_PIR"
+      ]
+    },
+    {
+      "seed": 55,
+      "best_chromosome": "0000111100100100",
+      "best_fitness": 0.9847276076237312,
+      "best_info": {
+        "fitness": 0.9847276076237312,
+        "score": 0.9922276076237312,
+        "f1": 0.998396945209917,
+        "log_loss": 0.006169337586185796,
+        "acc": 0.9995418098510882,
+        "per_fold": [
+          {
+            "fold": 0,
+            "seed": 0,
+            "f1": 0.9951908356297509,
+            "log_loss": 0.01122619897231582
+          },
+          {
+            "fold": 1,
+            "seed": 0,
+            "f1": 1.0,
+            "log_loss": 0.0032630187618638688
+          },
+          {
+            "fold": 2,
+            "seed": 0,
+            "f1": 1.0,
+            "log_loss": 0.004018795024377698
+          }
+        ],
+        "n_features": 6,
+        "time_s": 0.7539958953857422
+      },
+      "history": [
+        {
+          "generation": 0,
+          "best_fitness": 0.8322975197762627,
+          "mean_fitness": 0.7002949123024467,
+          "std_fitness": 0.07964778884656416,
+          "best_f1": 0.8781497374392903,
+          "best_n_features": 8,
+          "best_chromosome": "0001101100001111",
+          "evals_cum": 20,
+          "elapsed_s": 14.517778158187866
+        },
+        {
+          "generation": 1,
+          "best_fitness": 0.9422058515090053,
+          "mean_fitness": 0.754070048139012,
+          "std_fitness": 0.08105217547268193,
+          "best_f1": 0.9600389863547759,
+          "best_n_features": 9,
+          "best_chromosome": "0000110111101110",
+          "evals_cum": 38,
+          "elapsed_s": 28.249526500701904
+        },
+        {
+          "generation": 2,
+          "best_fitness": 0.9422058515090053,
+          "mean_fitness": 0.7990162320508911,
+          "std_fitness": 0.06577854958424792,
+          "best_f1": 0.9600389863547759,
+          "best_n_features": 9,
+          "best_chromosome": "0000110111101110",
+          "evals_cum": 51,
+          "elapsed_s": 39.67564296722412
+        },
+        {
+          "generation": 3,
+          "best_fitness": 0.9576749320536303,
+          "mean_fitness": 0.8093670203485042,
+          "std_fitness": 0.07457517222239367,
+          "best_f1": 0.9798298637407288,
+          "best_n_features": 9,
+          "best_chromosome": "0000111011100111",
+          "evals_cum": 68,
+          "elapsed_s": 52.591238260269165
+        },
+        {
+          "generation": 4,
+          "best_fitness": 0.9737325814736678,
+          "mean_fitness": 0.8249052576141775,
+          "std_fitness": 0.10197808381527015,
+          "best_f1": 0.9945605649157562,
+          "best_n_features": 7,
+          "best_chromosome": "0000111100100110",
+          "evals_cum": 83,
+          "elapsed_s": 64.48313760757446
+        },
+        {
+          "generation": 5,
+          "best_fitness": 0.9737325814736678,
+          "mean_fitness": 0.8441582084722224,
+          "std_fitness": 0.09428213742543791,
+          "best_f1": 0.9945605649157562,
+          "best_n_features": 7,
+          "best_chromosome": "0000111100100110",
+          "evals_cum": 98,
+          "elapsed_s": 75.49372935295105
+        },
+        {
+          "generation": 6,
+          "best_fitness": 0.9737325814736678,
+          "mean_fitness": 0.8837954495006116,
+          "std_fitness": 0.06798034030462287,
+          "best_f1": 0.9945605649157562,
+          "best_n_features": 7,
+          "best_chromosome": "0000111100100110",
+          "evals_cum": 113,
+          "elapsed_s": 86.06505107879639
+        },
+        {
+          "generation": 7,
+          "best_fitness": 0.9815869985292539,
+          "mean_fitness": 0.8526274739154471,
+          "std_fitness": 0.1246507460451931,
+          "best_f1": 0.999203634951773,
+          "best_n_features": 8,
+          "best_chromosome": "1000111101100100",
+          "evals_cum": 128,
+          "elapsed_s": 96.61098718643188
+        },
+        {
+          "generation": 8,
+          "best_fitness": 0.9815869985292539,
+          "mean_fitness": 0.9295886307081801,
+          "std_fitness": 0.06491567072464507,
+          "best_f1": 0.999203634951773,
+          "best_n_features": 8,
+          "best_chromosome": "1000111101100100",
+          "evals_cum": 141,
+          "elapsed_s": 105.49181771278381
+        },
+        {
+          "generation": 9,
+          "best_fitness": 0.9847276076237312,
+          "mean_fitness": 0.8408561302954423,
+          "std_fitness": 0.0851366643734169,
+          "best_f1": 0.998396945209917,
+          "best_n_features": 6,
+          "best_chromosome": "0000111100100100",
+          "evals_cum": 152,
+          "elapsed_s": 113.19198608398438
+        },
+        {
+          "generation": 10,
+          "best_fitness": 0.9847276076237312,
+          "mean_fitness": 0.8477804235248607,
+          "std_fitness": 0.12605427679755815,
+          "best_f1": 0.998396945209917,
+          "best_n_features": 6,
+          "best_chromosome": "0000111100100100",
+          "evals_cum": 162,
+          "elapsed_s": 120.84704875946045
+        },
+        {
+          "generation": 11,
+          "best_fitness": 0.9847276076237312,
+          "mean_fitness": 0.8794188642270677,
+          "std_fitness": 0.10169743041528345,
+          "best_f1": 0.998396945209917,
+          "best_n_features": 6,
+          "best_chromosome": "0000111100100100",
+          "evals_cum": 171,
+          "elapsed_s": 127.05968284606934
+        },
+        {
+          "generation": 12,
+          "best_fitness": 0.9847276076237312,
+          "mean_fitness": 0.8730797505981396,
+          "std_fitness": 0.0969790542227932,
+          "best_f1": 0.998396945209917,
+          "best_n_features": 6,
+          "best_chromosome": "0000111100100100",
+          "evals_cum": 182,
+          "elapsed_s": 134.6290419101715
+        },
+        {
+          "generation": 13,
+          "best_fitness": 0.9847276076237312,
+          "mean_fitness": 0.8814249830197717,
+          "std_fitness": 0.07009084692622956,
+          "best_f1": 0.998396945209917,
+          "best_n_features": 6,
+          "best_chromosome": "0000111100100100",
+          "evals_cum": 194,
+          "elapsed_s": 143.02688074111938
+        },
+        {
+          "generation": 14,
+          "best_fitness": 0.9847276076237312,
+          "mean_fitness": 0.8809377871199958,
+          "std_fitness": 0.0878589038190672,
+          "best_f1": 0.998396945209917,
+          "best_n_features": 6,
+          "best_chromosome": "0000111100100100",
+          "evals_cum": 203,
+          "elapsed_s": 148.9713168144226
+        },
+        {
+          "generation": 15,
+          "best_fitness": 0.9847276076237312,
+          "mean_fitness": 0.9066577295896566,
+          "std_fitness": 0.08637179320259748,
+          "best_f1": 0.998396945209917,
+          "best_n_features": 6,
+          "best_chromosome": "0000111100100100",
+          "evals_cum": 210,
+          "elapsed_s": 153.73823595046997
+        }
+      ],
+      "n_evals": 210,
+      "time_s": 153.73836469650269,
+      "final_population": [
+        "0000111100100100",
+        "0000111100100100",
+        "1000111100100100",
+        "1000101001100100",
+        "0000110100000100",
+        "1000111100100110",
+        "0000111001110111",
+        "0000111110100110",
+        "0000111100100100",
+        "0000111000100100",
+        "0000111100100100",
+        "0000111100100100",
+        "0000011101100100",
+        "0000110100100111",
+        "0000111000110110",
+        "0000111101100100",
+        "0100111100100100",
+        "0000111100101100",
+        "0000111100100100",
+        "0100111100100101"
+      ],
+      "selected_features": [
+        "S1_Light",
+        "S2_Light",
+        "S3_Light",
+        "S4_Light",
+        "S3_Sound",
+        "S5_CO2_Slope"
+      ]
+    }
+  ],
+  "stats": {
+    "best_fitness_best": 0.9854378143202098,
+    "best_fitness_mean": 0.9838640344555041,
+    "best_fitness_std": 0.0018934908854299978,
+    "f1_best": 1.0,
+    "f1_mean": 0.9986139698136226,
+    "f1_std": 0.001449745841682007,
+    "n_features_mean": 7.2,
+    "total_evals": 1057,
+    "total_time_s": 808.642662525177
+  },
+  "selection_frequency": {
+    "S1_Temp": 0.0,
+    "S2_Temp": 0.0,
+    "S3_Temp": 0.0,
+    "S4_Temp": 0.0,
+    "S1_Light": 1.0,
+    "S2_Light": 1.0,
+    "S3_Light": 1.0,
+    "S4_Light": 0.8,
+    "S1_Sound": 0.6,
+    "S2_Sound": 0.0,
+    "S3_Sound": 0.4,
+    "S4_Sound": 0.8,
+    "S5_CO2": 0.2,
+    "S5_CO2_Slope": 0.2,
+    "S6_PIR": 0.4,
+    "S7_PIR": 0.8
+  },
+  "final_selection": {
+    "rule": "kromosom dengan fitness validasi tertinggi di antara semua seed",
+    "seed": 22,
+    "chromosome": "0000111110010011",
+    "features": [
+      "S1_Light",
+      "S2_Light",
+      "S3_Light",
+      "S4_Light",
+      "S1_Sound",
+      "S4_Sound",
+      "S6_PIR",
+      "S7_PIR"
+    ]
+  }
+}

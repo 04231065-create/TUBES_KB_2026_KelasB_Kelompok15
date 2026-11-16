@@ -1,0 +1,89 @@
+started 2026-11-15 22:35:22
+[GA seed 11] gen  0 best 0.8176 mean 0.6922 nfeat 7 evals 20
+[GA seed 11] gen  1 best 0.9641 mean 0.7351 nfeat 9 evals 36
+[GA seed 11] gen  2 best 0.9720 mean 0.7714 nfeat 9 evals 54
+[GA seed 11] gen  3 best 0.9810 mean 0.8287 nfeat 8 evals 70
+[GA seed 11] gen  4 best 0.9810 mean 0.8771 nfeat 8 evals 82
+[GA seed 11] gen  5 best 0.9810 mean 0.8732 nfeat 8 evals 96
+[GA seed 11] gen  6 best 0.9810 mean 0.9189 nfeat 8 evals 109
+[GA seed 11] gen  7 best 0.9813 mean 0.8900 nfeat 6 evals 123
+[GA seed 11] gen  8 best 0.9813 mean 0.9079 nfeat 6 evals 135
+[GA seed 11] gen  9 best 0.9813 mean 0.9192 nfeat 6 evals 148
+[GA seed 11] gen 10 best 0.9813 mean 0.9064 nfeat 6 evals 158
+[GA seed 11] gen 11 best 0.9813 mean 0.8622 nfeat 6 evals 169
+[GA seed 11] gen 12 best 0.9813 mean 0.8552 nfeat 6 evals 178
+[GA seed 11] gen 13 best 0.9813 mean 0.8817 nfeat 6 evals 190
+seed 11: best fitness 0.9813 f1 0.9965 features ['S1_Light', 'S2_Light', 'S3_Light', 'S3_Sound', 'S4_Sound', 'S7_PIR'] evals 190 time 148.2s
+[GA seed 22] gen  0 best 0.8074 mean 0.7029 nfeat 9 evals 20
+[GA seed 22] gen  1 best 0.8347 mean 0.7401 nfeat 6 evals 35
+[GA seed 22] gen  2 best 0.9001 mean 0.7706 nfeat 9 evals 53
+[GA seed 22] gen  3 best 0.9001 mean 0.7785 nfeat 9 evals 68
+[GA seed 22] gen  4 best 0.9106 mean 0.7969 nfeat 9 evals 85
+[GA seed 22] gen  5 best 0.9531 mean 0.8125 nfeat 8 evals 99
+[GA seed 22] gen  6 best 0.9695 mean 0.8414 nfeat 9 evals 115
+[GA seed 22] gen  7 best 0.9767 mean 0.8689 nfeat 10 evals 126
+[GA seed 22] gen  8 best 0.9767 mean 0.8985 nfeat 10 evals 138
+[GA seed 22] gen  9 best 0.9767 mean 0.8991 nfeat 10 evals 150
+[GA seed 22] gen 10 best 0.9767 mean 0.8757 nfeat 10 evals 163
+[GA seed 22] gen 11 best 0.9827 mean 0.9111 nfeat 8 evals 173
+[GA seed 22] gen 12 best 0.9827 mean 0.9312 nfeat 8 evals 183
+[GA seed 22] gen 13 best 0.9827 mean 0.8979 nfeat 8 evals 195
+[GA seed 22] gen 14 best 0.9827 mean 0.8894 nfeat 8 evals 206
+[GA seed 22] gen 15 best 0.9827 mean 0.9108 nfeat 8 evals 214
+[GA seed 22] gen 16 best 0.9854 mean 0.8803 nfeat 8 evals 227
+[GA seed 22] gen 17 best 0.9854 mean 0.9176 nfeat 8 evals 233
+[GA seed 22] gen 18 best 0.9854 mean 0.9210 nfeat 8 evals 238
+[GA seed 22] gen 19 best 0.9854 mean 0.9189 nfeat 8 evals 248
+[GA seed 22] gen 20 best 0.9854 mean 0.9383 nfeat 8 evals 257
+seed 22: best fitness 0.9854 f1 1.0000 features ['S1_Light', 'S2_Light', 'S3_Light', 'S4_Light', 'S1_Sound', 'S4_Sound', 'S6_PIR', 'S7_PIR'] evals 257 time 211.4s
+[GA seed 33] gen  0 best 0.8391 mean 0.7080 nfeat 11 evals 20
+[GA seed 33] gen  1 best 0.8695 mean 0.7496 nfeat 11 evals 37
+[GA seed 33] gen  2 best 0.8695 mean 0.7526 nfeat 11 evals 54
+[GA seed 33] gen  3 best 0.9401 mean 0.7751 nfeat 11 evals 69
+[GA seed 33] gen  4 best 0.9719 mean 0.8146 nfeat 11 evals 86
+[GA seed 33] gen  5 best 0.9719 mean 0.8054 nfeat 11 evals 104
+[GA seed 33] gen  6 best 0.9719 mean 0.8191 nfeat 11 evals 116
+[GA seed 33] gen  7 best 0.9719 mean 0.8649 nfeat 11 evals 130
+[GA seed 33] gen  8 best 0.9824 mean 0.8697 nfeat 8 evals 144
+[GA seed 33] gen  9 best 0.9824 mean 0.8352 nfeat 8 evals 158
+[GA seed 33] gen 10 best 0.9824 mean 0.8774 nfeat 8 evals 170
+[GA seed 33] gen 11 best 0.9824 mean 0.8400 nfeat 8 evals 183
+[GA seed 33] gen 12 best 0.9824 mean 0.8779 nfeat 8 evals 196
+[GA seed 33] gen 13 best 0.9824 mean 0.9357 nfeat 8 evals 205
+[GA seed 33] gen 14 best 0.9824 mean 0.9090 nfeat 8 evals 217
+seed 33: best fitness 0.9824 f1 0.9981 features ['S1_Light', 'S2_Light', 'S3_Light', 'S4_Light', 'S1_Sound', 'S4_Sound', 'S5_CO2', 'S7_PIR'] evals 217 time 160.1s
+[GA seed 44] gen  0 best 0.8419 mean 0.6925 nfeat 8 evals 20
+[GA seed 44] gen  1 best 0.9062 mean 0.7583 nfeat 5 evals 37
+[GA seed 44] gen  2 best 0.9062 mean 0.7673 nfeat 5 evals 52
+[GA seed 44] gen  3 best 0.9062 mean 0.8194 nfeat 5 evals 69
+[GA seed 44] gen  4 best 0.9062 mean 0.8156 nfeat 5 evals 84
+[GA seed 44] gen  5 best 0.9529 mean 0.8383 nfeat 7 evals 98
+[GA seed 44] gen  6 best 0.9531 mean 0.8674 nfeat 8 evals 110
+[GA seed 44] gen  7 best 0.9707 mean 0.8638 nfeat 7 evals 123
+[GA seed 44] gen  8 best 0.9854 mean 0.8770 nfeat 8 evals 137
+[GA seed 44] gen  9 best 0.9854 mean 0.9206 nfeat 8 evals 146
+[GA seed 44] gen 10 best 0.9854 mean 0.9360 nfeat 8 evals 152
+[GA seed 44] gen 11 best 0.9854 mean 0.9295 nfeat 8 evals 162
+[GA seed 44] gen 12 best 0.9854 mean 0.9067 nfeat 8 evals 169
+[GA seed 44] gen 13 best 0.9854 mean 0.9157 nfeat 8 evals 178
+[GA seed 44] gen 14 best 0.9854 mean 0.8986 nfeat 8 evals 183
+seed 44: best fitness 0.9854 f1 1.0000 features ['S1_Light', 'S2_Light', 'S3_Light', 'S4_Light', 'S1_Sound', 'S4_Sound', 'S6_PIR', 'S7_PIR'] evals 183 time 135.3s
+[GA seed 55] gen  0 best 0.8323 mean 0.7003 nfeat 8 evals 20
+[GA seed 55] gen  1 best 0.9422 mean 0.7541 nfeat 9 evals 38
+[GA seed 55] gen  2 best 0.9422 mean 0.7990 nfeat 9 evals 51
+[GA seed 55] gen  3 best 0.9577 mean 0.8094 nfeat 9 evals 68
+[GA seed 55] gen  4 best 0.9737 mean 0.8249 nfeat 7 evals 83
+[GA seed 55] gen  5 best 0.9737 mean 0.8442 nfeat 7 evals 98
+[GA seed 55] gen  6 best 0.9737 mean 0.8838 nfeat 7 evals 113
+[GA seed 55] gen  7 best 0.9816 mean 0.8526 nfeat 8 evals 128
+[GA seed 55] gen  8 best 0.9816 mean 0.9296 nfeat 8 evals 141
+[GA seed 55] gen  9 best 0.9847 mean 0.8409 nfeat 6 evals 152
+[GA seed 55] gen 10 best 0.9847 mean 0.8478 nfeat 6 evals 162
+[GA seed 55] gen 11 best 0.9847 mean 0.8794 nfeat 6 evals 171
+[GA seed 55] gen 12 best 0.9847 mean 0.8731 nfeat 6 evals 182
+[GA seed 55] gen 13 best 0.9847 mean 0.8814 nfeat 6 evals 194
+[GA seed 55] gen 14 best 0.9847 mean 0.8809 nfeat 6 evals 203
+[GA seed 55] gen 15 best 0.9847 mean 0.9067 nfeat 6 evals 210
+seed 55: best fitness 0.9847 f1 0.9984 features ['S1_Light', 'S2_Light', 'S3_Light', 'S4_Light', 'S3_Sound', 'S5_CO2_Slope'] evals 210 time 153.7s
+FINAL GA features (8): ['S1_Light', 'S2_Light', 'S3_Light', 'S4_Light', 'S1_Sound', 'S4_Sound', 'S6_PIR', 'S7_PIR']
+stats {'best_fitness_best': 0.9854378143202098, 'best_fitness_mean': 0.9838640344555041, 'best_fitness_std': 0.0018934908854299978, 'f1_best': 1.0, 'f1_mean': 0.9986139698136226, 'f1_std': 0.001449745841682007, 'n_features_mean': 7.2, 'total_evals': 1057, 'total_time_s': 808.642662525177}
