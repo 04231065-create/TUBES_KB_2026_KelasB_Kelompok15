@@ -58,74 +58,69 @@ def show(fig):
 
 STYLE = """
 <style>
-/* ===== Latar utama: hitam -> biru tua dengan cahaya biru/ungu ===== */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap');
+html, body, .stApp, .stApp p, .stApp li, .stApp label, .stApp td, .stApp th, .stApp input {font-family: 'Inter', 'Source Sans Pro', sans-serif;}
+/* ===== Latar: gading -> biru pucat, grid blueprint halus, kilau emas, ilustrasi smart room ===== */
 .stApp, [data-testid="stAppViewContainer"] {
   background:
-    radial-gradient(900px 520px at 8% -8%, rgba(42,120,214,.30), transparent 60%),
-    radial-gradient(800px 480px at 100% 0%, rgba(98,80,214,.22), transparent 60%),
-    radial-gradient(700px 500px at 50% 110%, rgba(28,92,171,.25), transparent 60%),
-    linear-gradient(180deg, #04060c 0%, #070d1a 45%, #0a1426 100%) !important;
-  color: #e6edf7;
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 640'%3E %3Cg fill='none' stroke='%23123a6b' stroke-width='1.7' stroke-linecap='round' stroke-linejoin='round' stroke-opacity='0.13'%3E %3Cpath d='M120 300 L340 130 L560 300'/%3E %3Cpath d='M150 280 L150 560 L530 560 L530 280'/%3E %3Cpath d='M110 560 L570 560'/%3E %3Crect x='190' y='330' width='120' height='100' rx='6'/%3E %3Cpath d='M250 330 L250 430 M190 380 L310 380'/%3E %3Crect x='420' y='420' width='70' height='140' rx='6'/%3E %3Ccircle cx='478' cy='492' r='4'/%3E %3Cpath d='M340 180 L340 230'/%3E %3Cpath d='M318 230 Q340 205 362 230 Z'/%3E %3Ccircle cx='300' cy='470' r='16'/%3E %3Cpath d='M272 560 L272 520 Q300 490 328 520 L328 560'/%3E %3Ccircle cx='375' cy='478' r='14'/%3E %3Cpath d='M351 560 L351 525 Q375 498 399 525 L399 560'/%3E %3Ccircle cx='165' cy='300' r='7'/%3E %3Cpath d='M182 290 Q192 300 182 310 M194 282 Q210 300 194 318'/%3E %3Ccircle cx='515' cy='300' r='7'/%3E %3Cpath d='M498 290 Q488 300 498 310 M486 282 Q470 300 486 318'/%3E %3Cpath d='M610 330 L610 420'/%3E %3Cpath d='M598 330 Q610 310 622 330 L622 420'/%3E %3Ccircle cx='610' cy='436' r='16'/%3E %3Cpath d='M598 330 L598 420'/%3E %3Ccircle cx='620' cy='220' r='44'/%3E %3Ccircle cx='620' cy='220' r='6'/%3E %3Cpath d='M620 214 Q600 180 620 178 Q640 180 626 214'/%3E %3Cpath d='M626 224 Q660 236 652 254 Q636 262 618 228'/%3E %3Cpath d='M614 222 Q580 236 586 252 Q600 262 616 228'/%3E %3Cg stroke-opacity='0.10'%3E %3Cpath d='M700 120 L780 90 M700 120 L780 160 M700 120 L780 230 M700 200 L780 90 M700 200 L780 160 M700 200 L780 230 M700 280 L780 90 M700 280 L780 160 M700 280 L780 230 M780 90 L850 160 M780 160 L850 160 M780 230 L850 160'/%3E %3C/g%3E %3Ccircle cx='700' cy='120' r='12'/%3E%3Ccircle cx='700' cy='200' r='12'/%3E%3Ccircle cx='700' cy='280' r='12'/%3E %3Ccircle cx='780' cy='90' r='12'/%3E%3Ccircle cx='780' cy='160' r='12'/%3E%3Ccircle cx='780' cy='230' r='12'/%3E %3Ccircle cx='850' cy='160' r='14'/%3E %3Cpath d='M660 560 L700 520 L740 535 L780 480 L820 500 L860 450'/%3E %3Cpath d='M660 580 L870 580 M660 580 L660 440'/%3E %3C/g%3E %3Cg fill='%23c9a227' fill-opacity='0.16' stroke='none'%3E %3Ccircle cx='340' cy='250' r='34'/%3E %3Ccircle cx='850' cy='160' r='9'/%3E %3C/g%3E %3C/svg%3E") right 1.5% bottom 2% / min(58vw, 860px) auto no-repeat fixed,
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 260 260'%3E%3Cpath d='M38 46 L39.5 50.5 L44 52 L39.5 53.5 L38 58 L36.5 53.5 L32 52 L36.5 50.5 Z' fill='%23c9a227' fill-opacity='0.55'/%3E%3Cpath d='M170 26.5 L170.875 29.125 L173.5 30 L170.875 30.875 L170 33.5 L169.125 30.875 L166.5 30 L169.125 29.125 Z' fill='%23c9a227' fill-opacity='0.45'/%3E%3Cpath d='M222 135 L223.25 138.75 L227 140 L223.25 141.25 L222 145 L220.75 141.25 L217 140 L220.75 138.75 Z' fill='%23c9a227' fill-opacity='0.5'/%3E%3Cpath d='M96 187 L96.75 189.25 L99 190 L96.75 190.75 L96 193 L95.25 190.75 L93 190 L95.25 189.25 Z' fill='%23c9a227' fill-opacity='0.4'/%3E%3Cpath d='M150 227.5 L151.125 230.875 L154.5 232 L151.125 233.125 L150 236.5 L148.875 233.125 L145.5 232 L148.875 230.875 Z' fill='%23c9a227' fill-opacity='0.45'/%3E%3Ccircle cx='120' cy='96' r='1.4' fill='%23c9a227' fill-opacity='.5'/%3E%3Ccircle cx='20' cy='150' r='1.2' fill='%23c9a227' fill-opacity='.45'/%3E%3Ccircle cx='240' cy='60' r='1.1' fill='%23c9a227' fill-opacity='.4'/%3E%3C/svg%3E") 0 0 / 260px 260px,
+    linear-gradient(rgba(18,58,107,.035) 1px, transparent 1px) 0 0 / 34px 34px,
+    linear-gradient(90deg, rgba(18,58,107,.035) 1px, transparent 1px) 0 0 / 34px 34px,
+    radial-gradient(900px 520px at 100% 0%, rgba(255,252,235,.75), transparent 65%),
+    radial-gradient(700px 480px at 0% 100%, rgba(240,190,70,.22), transparent 65%),
+    linear-gradient(160deg, #fffaea 0%, #fdf1c6 45%, #f9e6a4 100%) !important;
 }
-[data-testid="stHeader"] {background: rgba(4,6,12,.55); backdrop-filter: blur(8px);}
-/* ===== Teks ===== */
-.stApp p, .stApp li, .stApp label, .stApp span, .stApp div[data-testid="stMarkdownContainer"],
-.stApp h1, .stApp h2, .stApp h3, .stApp h4, .stApp td, .stApp th, .stApp caption, .katex {color: #e6edf7;}
-.stApp h2, .stApp h3, .stApp h4 {color: #ffffff; letter-spacing: .01em;}
-.stApp a {color: #6fb1ff !important;}
-[data-testid="stCaptionContainer"], .stApp small {color: #9fb3d1 !important;}
-/* ===== Sidebar ===== */
-[data-testid="stSidebar"] {background: linear-gradient(180deg, #03050a 0%, #081227 60%, #0b1a36 100%) !important;
-  border-right: 1px solid rgba(76,155,240,.25);}
-[data-testid="stSidebar"] * {color: #dbe6f6;}
-[data-testid="stSidebar"] h1 {color: #ffffff; text-shadow: 0 0 18px rgba(76,155,240,.55);}
+[data-testid="stHeader"] {background: rgba(255,248,224,.75); backdrop-filter: blur(8px);}
+.stApp h1, .stApp h2, .stApp h3 {font-family: 'Playfair Display', Georgia, serif; color: #0b1f3a; letter-spacing: .005em;}
+.stApp h4, .stApp h5 {color: #0b1f3a;}
+.stApp a {color: #123a6b !important; text-decoration-color: #c9a227 !important;}
+/* ===== Sidebar navy + emas ===== */
+[data-testid="stSidebar"] {background:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 440'%3E %3Cg fill='none' stroke='%23d9f2e3' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round' stroke-opacity='0.16'%3E %3Cpath d='M40 250 L150 165 L260 250'/%3E %3Cpath d='M60 235 L60 380 L240 380 L240 235'/%3E %3Cpath d='M30 380 L270 380'/%3E %3Cpath d='M150 350 C 105 330 105 270 150 245 C 195 270 195 330 150 350 Z'/%3E %3Cpath d='M150 350 L150 262'/%3E %3Cpath d='M150 315 L128 296 M150 296 L172 278'/%3E %3Cpath d='M150 140 Q170 120 150 100 M150 140 Q190 120 150 80 M150 140 Q210 120 150 60' stroke-opacity='0.12'/%3E %3Ccircle cx='150' cy='140' r='5'/%3E %3Cpath d='M215 300 L215 345 M207 300 Q215 288 223 300 L223 345 M207 300 L207 345'/%3E %3Ccircle cx='215' cy='356' r='11'/%3E %3Ccircle cx='85' cy='300' r='14'/%3E %3Cpath d='M85 286 L85 300 L95 307'/%3E %3Cpath d='M20 60 L60 60 L60 100 L100 100 M280 40 L240 40 L240 90 M20 140 L45 140 L45 175' stroke-opacity='0.10'/%3E %3Ccircle cx='100' cy='100' r='4' stroke-opacity='0.12'/%3E%3Ccircle cx='240' cy='90' r='4' stroke-opacity='0.12'/%3E%3Ccircle cx='45' cy='175' r='4' stroke-opacity='0.12'/%3E %3C/g%3E %3Cg fill='%23e7c766' fill-opacity='0.22'%3E%3Ccircle cx='150' cy='140' r='3'/%3E%3C/g%3E %3C/svg%3E") center bottom 24px / 92% auto no-repeat,
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cpath d='M30 36 L31.0 39.0 L34 40 L31.0 41.0 L30 44 L29.0 41.0 L26 40 L29.0 39.0 Z' fill='%23c9a227' fill-opacity='0.55'/%3E%3Cpath d='M150 117 L150.75 119.25 L153 120 L150.75 120.75 L150 123 L149.25 120.75 L147 120 L149.25 119.25 Z' fill='%23c9a227' fill-opacity='0.45'/%3E%3Cpath d='M90 167.5 L90.625 169.375 L92.5 170 L90.625 170.625 L90 172.5 L89.375 170.625 L87.5 170 L89.375 169.375 Z' fill='%23c9a227' fill-opacity='0.4'/%3E%3Ccircle cx='120' cy='60' r='1.1' fill='%23e7c766' fill-opacity='.5'/%3E%3C/svg%3E") 0 0 / 200px 200px,
+    radial-gradient(420px 320px at 100% 0%, rgba(120,200,150,.22), transparent 70%),
+    linear-gradient(180deg, #072a1f 0%, #0b3d2e 45%, #14532d 80%, #1b6b45 100%) !important;
+  border-right: 1px solid rgba(201,162,39,.4);}
+[data-testid="stSidebar"] * {color: #e8f5ee !important;}
+[data-testid="stSidebar"] h1 {font-family: 'Playfair Display', Georgia, serif; color: #f4e3a8 !important; letter-spacing: .01em;}
+[data-testid="stSidebar"] hr {border-color: rgba(201,162,39,.35) !important;}
+[data-testid="stSidebar"] [data-testid="stCaptionContainer"] * {color: #a8cdb8 !important;}
 /* ===== Banner judul ===== */
-.kb-banner {background: linear-gradient(120deg, #050b18 0%, #0f2a5c 45%, #1c5cab 75%, #6250d6 100%);
-  padding: 28px 34px; border-radius: 18px; margin: 4px 0 24px 0; position: relative; overflow: hidden;
-  border: 1px solid rgba(111,177,255,.35); box-shadow: 0 0 0 1px rgba(76,155,240,.08), 0 10px 40px rgba(28,92,171,.35);}
-.kb-banner:after {content: ""; position: absolute; inset: 0;
-  background: repeating-linear-gradient(90deg, rgba(255,255,255,.035) 0 1px, transparent 1px 42px),
-              repeating-linear-gradient(0deg, rgba(255,255,255,.035) 0 1px, transparent 1px 42px);}
-.kb-banner .kb-eyebrow {font-size: .8rem; letter-spacing: .18em; text-transform: uppercase; color: #8fc3ff !important;
-  font-weight: 700; position: relative; z-index: 1;}
-.kb-banner .kb-title {font-size: 2.2rem; font-weight: 800; line-height: 1.12; margin: 6px 0 2px 0; color: #ffffff !important;
-  text-shadow: 0 0 24px rgba(111,177,255,.45); position: relative; z-index: 1;}
-.kb-banner .kb-sub {font-size: 1.02rem; color: #c9dbf5 !important; margin-top: 8px; position: relative; z-index: 1;}
-/* ===== Kartu metrik (glass + glow) ===== */
-[data-testid="stMetric"] {background: linear-gradient(160deg, rgba(20,38,72,.85), rgba(10,20,40,.85));
-  border: 1px solid rgba(111,177,255,.22); border-left: 4px solid #4c9bf0; border-radius: 14px;
-  padding: 14px 18px; box-shadow: 0 0 22px rgba(57,135,229,.16);}
-[data-testid="stMetricValue"], [data-testid="stMetricValue"] * {color: #ffffff !important;}
-[data-testid="stMetricLabel"], [data-testid="stMetricLabel"] * {color: #9fb3d1 !important;}
-/* ===== Gambar/plot, tabel, kotak info ===== */
-[data-testid="stImage"] img, [data-testid="stPyplot"] img, .stApp img {border-radius: 14px;
-  border: 1px solid rgba(111,177,255,.18); box-shadow: 0 0 24px rgba(28,92,171,.18);}
-.stApp table {background: rgba(13,21,38,.85) !important; border-radius: 10px;}
-.stApp thead tr th, .stApp table th {background: #12223f !important; color: #cfe2ff !important;}
-.stApp table td {border-color: #1f2c45 !important;}
-[data-testid="stAlert"] {background: rgba(28,92,171,.18) !important; border: 1px solid rgba(111,177,255,.25);}
-/* ===== Input, select, uploader, tombol ===== */
-[data-baseweb="input"], [data-baseweb="input"] > div, [data-baseweb="select"] > div, [data-baseweb="base-input"],
-[data-testid="stFileUploaderDropzone"], [data-testid="stNumberInput"] button {
-  background: #0f1b30 !important; border-color: #22406e !important; color: #e6edf7 !important;}
-.stApp input, .stApp textarea {color: #e6edf7 !important; -webkit-text-fill-color: #e6edf7 !important;}
-.stButton button, [data-testid="stDownloadButton"] button {background: linear-gradient(90deg, #1c5cab, #4c9bf0) !important;
-  color: #ffffff !important; border: 0 !important; box-shadow: 0 0 16px rgba(76,155,240,.35);}
-/* ===== Tabs ===== */
-.stTabs [data-baseweb="tab-list"] {gap: 6px; border-bottom: 1px solid #1f2c45;}
-.stTabs [data-baseweb="tab"] {color: #9fb3d1 !important; background: transparent;}
-.stTabs [aria-selected="true"] {color: #6fb1ff !important;}
-hr {border-color: #1f2c45 !important;}
+.kb-banner {background: linear-gradient(120deg, #081629 0%, #0b1f3a 40%, #123a6b 80%, #1c4f8f 100%);
+  padding: 30px 36px 28px; border-radius: 16px; margin: 4px 0 26px 0; position: relative; overflow: hidden;
+  border: 1px solid rgba(201,162,39,.45); box-shadow: 0 18px 40px rgba(11,31,58,.22);}
+.kb-banner:before {content: ""; position: absolute; top: 0; bottom: 0; right: 0; width: 30%;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 120'%3E%3Cpath d='M20 25 L21.25 28.75 L25 30 L21.25 31.25 L20 35 L18.75 31.25 L15 30 L18.75 28.75 Z' fill='%23e7c766' fill-opacity='0.8'/%3E%3Cpath d='M110 17 L110.75 19.25 L113 20 L110.75 20.75 L110 23 L109.25 20.75 L107 20 L109.25 19.25 Z' fill='%23e7c766' fill-opacity='0.7'/%3E%3Cpath d='M140 86 L141.0 89.0 L144 90 L141.0 91.0 L140 94 L139.0 91.0 L136 90 L139.0 89.0 Z' fill='%23e7c766' fill-opacity='0.75'/%3E%3Cpath d='M60 92.5 L60.625 94.375 L62.5 95 L60.625 95.625 L60 97.5 L59.375 95.625 L57.5 95 L59.375 94.375 Z' fill='%23e7c766' fill-opacity='0.6'/%3E%3C/svg%3E") 0 0 / 160px 120px; opacity: .9;}
+.kb-banner:after {content: ""; position: absolute; left: 36px; right: 36px; bottom: 0; height: 3px;
+  background: linear-gradient(90deg, #c9a227, #f4e3a8 50%, rgba(201,162,39,0));}
+.kb-banner .kb-eyebrow {font-size: .78rem; letter-spacing: .24em; text-transform: uppercase; color: #e7c766;
+  font-weight: 600; position: relative; z-index: 1;}
+.kb-banner .kb-title {font-family: 'Playfair Display', Georgia, serif; font-size: 2.35rem; font-weight: 700; line-height: 1.12;
+  margin: 8px 0 2px 0; color: #ffffff; position: relative; z-index: 1;}
+.kb-banner .kb-sub {font-size: 1rem; color: #c9d6ea; margin-top: 10px; position: relative; z-index: 1;}
+/* ===== Kartu metrik ===== */
+[data-testid="stMetric"] {background: rgba(255,255,255,.92); border: 1px solid #e3e9f1; border-top: 3px solid #c9a227;
+  border-radius: 12px; padding: 16px 20px; box-shadow: 0 10px 24px rgba(11,31,58,.07);}
+[data-testid="stMetricLabel"], [data-testid="stMetricLabel"] * {color: #5b6b82 !important; letter-spacing: .02em;}
+[data-testid="stMetricValue"], [data-testid="stMetricValue"] * {font-family: 'Playfair Display', Georgia, serif; color: #0b1f3a !important;}
+/* ===== Gambar/plot, tabel, kotak ===== */
+[data-testid="stImage"] img, .stApp img {border-radius: 12px; border: 1px solid #e3e9f1; box-shadow: 0 10px 24px rgba(11,31,58,.06);}
+.stApp table {background: #ffffff; border-radius: 10px;}
+.stApp table th {background: #0b1f3a !important; color: #f4e3a8 !important; font-weight: 600;}
+[data-testid="stDataFrame"] {background: #ffffff; border-radius: 10px; border: 1px solid #e3e9f1;}
+[data-testid="stMarkdownContainer"] > p, [data-testid="stMarkdownContainer"] > ol, [data-testid="stMarkdownContainer"] > ul {
+  text-shadow: 0 0 8px rgba(253,243,204,.95);}
+[data-testid="stFileUploaderDropzone"] {background: #fffcf0 !important; border: 1px dashed #c9a227 !important;}
+.stButton button, [data-testid="stDownloadButton"] button {background: #0b1f3a !important; color: #f4e3a8 !important;
+  border: 1px solid #c9a227 !important; box-shadow: 0 6px 16px rgba(11,31,58,.2);}
+.stTabs [data-baseweb="tab-list"] {border-bottom: 1px solid #e3e9f1;}
+.stTabs [aria-selected="true"] {color: #0b1f3a !important;}
+.stTabs [data-baseweb="tab-highlight"] {background-color: #c9a227 !important;}
 </style>
 """
 st.markdown(STYLE, unsafe_allow_html=True)
-if st.get_option("theme.base") != "dark":
-    # tanpa .streamlit/config.toml bertema gelap, grafik bawaan Streamlit memakai teks gelap: beri kartu terang
-    st.markdown("<style>[data-testid='stVegaLiteChart'], [data-testid='stArrowVegaLiteChart']"
-                "{background:#eef3fa;border-radius:12px;padding:10px;}"
-                "[data-testid='stDataFrame']{background:#ffffff;border-radius:10px;}</style>",
-                unsafe_allow_html=True)
-viz.use_dark()
+viz.use_sky()
 
 
 def banner(title: str, subtitle: str = "", eyebrow: str = "Kelompok 15 · Smart Room Occupancy"):
@@ -172,13 +167,13 @@ target `Room_Occupancy_Count` (0–3).
                     "precision, recall, confusion matrix.")
     st.markdown("#### Diagram sistem")
     st.graphviz_chart("""
-digraph G { rankdir=LR; bgcolor="transparent"; edge [color="#6fb1ff"]; node [shape=box, style="rounded,filled", fillcolor="#0f2a5c", color="#4c9bf0", fontcolor="#e6edf7", fontname="Helvetica", fontsize=11];
+digraph G { rankdir=LR; bgcolor="transparent"; edge [color="#123a6b"]; node [shape=box, style="rounded,filled", fillcolor="#f7f9fc", color="#123a6b", fontcolor="#0b1f3a", fontname="Helvetica", fontsize=11];
   data [label="UCI 864\\n16 sensor, 30 s"]; pre [label="Preprocessing\\nsplit kronologis 60/20/20\\nscaler fit di train\\nwindowing T langkah"];
-  ga [label="GA\\nseleksi sensor\\nkromosom 16-bit", fillcolor="#3a1d10", color="#f07a45"];
-  pso [label="PSO\\nhidden, lr, T,\\ndropout, batch", fillcolor="#0f3327", color="#2cc590"];
-  rnn [label="Elman RNN\\nP(0..3 orang)"]; fis [label="Fuzzy Mamdani\\nOccupancy + CO2 + Suhu", fillcolor="#3a2d0a", color="#f0b429"];
+  ga [label="GA\\nseleksi sensor\\nkromosom 16-bit", fillcolor="#fdeee7", color="#eb6834"];
+  pso [label="PSO\\nhidden, lr, T,\\ndropout, batch", fillcolor="#e6f6f0", color="#1baf7a"];
+  rnn [label="Elman RNN\\nP(0..3 orang)"]; fis [label="Fuzzy Mamdani\\nOccupancy + CO2 + Suhu", fillcolor="#fff4c7", color="#e0a800"];
   out [label="Rekomendasi HVAC\\nMinimum/Low/Medium/High"]; dash [label="Streamlit\\ndashboard", shape=component];
-  data->pre->ga->pso->rnn->fis->out->dash; pre->rnn [style=dashed, label="fitur terpilih", fontcolor="#9fb3d1"]; }
+  data->pre->ga->pso->rnn->fis->out->dash; pre->rnn [style=dashed, label="fitur terpilih", fontcolor="#4a5d7a"]; }
 """)
     comp = art("comparison.json")
     fe = art("fuzzy_eval.json")
