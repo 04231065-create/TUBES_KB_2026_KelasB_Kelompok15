@@ -45,6 +45,30 @@ def use_dark():
     _apply_rc()
 
 
+def use_sky():
+    """Tema biru muda untuk dashboard; laporan PDF tetap tema standar."""
+    global SURFACE, INK, INK2, GRID, SERIES, SEQ, DIV, HI_TEXT
+    SURFACE, INK, INK2, GRID = "#ffffff", "#0b1f3a", "#5b6b82", "#e6ebf2"
+    SERIES = ["#1c5cab", "#c9862a", "#1b9e8a", "#b8912a", "#c65b7c", "#3f7d20", "#6250d6", "#c0453f"]
+    SEQ = LinearSegmentedColormap.from_list("seq_sky", ["#f6f8fb", "#d6e3f3", "#9dbbe0", "#4f80bf",
+                                                        "#1c4f8f", "#0b1f3a"])
+    DIV = LinearSegmentedColormap.from_list("div_sky", ["#1c5cab", "#86b6ef", "#f4f7fb", "#f7c66b", "#c98500"])
+    HI_TEXT = "white"
+    _apply_rc()
+
+
+def use_warm():
+    """Tema terang hangat (krem-oranye) untuk dashboard; laporan PDF tetap tema standar."""
+    global SURFACE, INK, INK2, GRID, SERIES, SEQ, DIV, HI_TEXT
+    SURFACE, INK, INK2, GRID = "#fffcf7", "#2a2118", "#6b5848", "#f0e2d0"
+    SERIES = ["#2a78d6", "#e8701f", "#1baf9a", "#d9a000", "#e0567a", "#008300", "#6250d6", "#c2410c"]
+    SEQ = LinearSegmentedColormap.from_list("seq_warm", ["#fff7ec", "#ffe2bd", "#ffc27a", "#f08a24",
+                                                         "#c2560c", "#7a3406"])
+    DIV = LinearSegmentedColormap.from_list("div_warm", ["#1c5cab", "#86b6ef", "#fbf3e8", "#f7b267", "#c2410c"])
+    HI_TEXT = "white"
+    _apply_rc()
+
+
 plt.rcParams.update({
     "figure.facecolor": SURFACE, "axes.facecolor": SURFACE, "savefig.facecolor": SURFACE,
     "axes.edgecolor": GRID, "axes.labelcolor": INK2, "xtick.color": INK2, "ytick.color": INK2,
